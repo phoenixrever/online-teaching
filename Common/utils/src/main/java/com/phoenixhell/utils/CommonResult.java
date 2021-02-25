@@ -2,7 +2,6 @@ package com.phoenixhell.utils;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-import lombok.experimental.Accessors;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,7 +12,6 @@ import java.util.Map;
  */
 //统一返回结果
 @Data
-@Accessors(chain = true)
 public class CommonResult {
     private CommonResult() {
     }
@@ -45,7 +43,10 @@ public class CommonResult {
         commonResult.setMessage("失败");
         return commonResult;
     }
-
+    public CommonResult emptyData(){
+        commonResult.getData().clear();
+        return commonResult;
+    }
     public static CommonResult data(String key,Object value){
         commonResult.getData().put(key,value);
         return commonResult;

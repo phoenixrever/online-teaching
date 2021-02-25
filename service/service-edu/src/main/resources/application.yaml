@@ -3,7 +3,8 @@ server:
 spring:
   application:
     name: server-edu
-#  profiles: dev
+  profiles:
+    active: home
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:mysql://localhost:3306/guli?serverTimezone=GMT%2B8
@@ -21,6 +22,7 @@ spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
+
 
 #mybatis:
 #  mapper-locations: classpath:/*.xml
