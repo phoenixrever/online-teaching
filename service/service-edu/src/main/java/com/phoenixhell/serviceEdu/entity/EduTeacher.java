@@ -20,7 +20,7 @@ import java.util.Date;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@Accessors(chain = true)//开启流计算stream
+    @Accessors(chain = true)//开启流计算stream
 @ApiModel(value="EduTeacher对象", description="讲师")
 public class EduTeacher implements Serializable {
 
