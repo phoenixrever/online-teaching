@@ -1,9 +1,7 @@
 package com.phoenixhell.serviceEdu.controller;
 
 import com.phoenixhell.utils.CommonResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author phoenixhell
@@ -11,13 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/serviceEdu")
+@CrossOrigin
 public class EduLoginController {
-    @GetMapping("/login")
-    public CommonResult login(){
-        return  CommonResult.ok().emptyData().data("token","admin");
+    @PostMapping("/login")
+    public CommonResult login() {
+        return CommonResult.ok().emptyData().data("token", "admin");
     }
+
     @GetMapping("/info")
-    public CommonResult info(){
-        return CommonResult.ok().emptyData().data("name","admin").data("roles","[admin]").data("avatar","https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1306508493,2006189766&fm=26&gp=0.jpg");
+    public CommonResult info() {
+        return CommonResult.ok().emptyData().data("name", "admin").data("roles", "[admin]").data("avatar", "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1306508493,2006189766&fm=26&gp=0.jpg");
     }
 }
