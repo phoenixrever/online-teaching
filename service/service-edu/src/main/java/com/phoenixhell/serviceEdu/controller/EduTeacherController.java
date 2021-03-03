@@ -57,9 +57,7 @@ public class EduTeacherController {
     public CommonResult page(@PathVariable("currentPage") Integer page, @PathVariable("limit") Integer limit) {
         Page<EduTeacher> teacherPage = eduTeacherService.page(new Page<EduTeacher>(page, limit));
         Map<String, Object> map = new HashMap<>();
-        map.put("hasNext", teacherPage.hasNext());
-        map.put("hasPrevious", teacherPage.hasPrevious());
-        map.put("totals", teacherPage.getTotal());
+        map.put("total", teacherPage.getTotal());
         map.put("items", teacherPage.getRecords());
         return CommonResult.ok().emptyData().data(map);
     }
@@ -70,7 +68,7 @@ public class EduTeacherController {
                                       @PathVariable("limit") Integer limit,
                                       // 需要用post 提交 必须使用json传递数据
                                       @RequestBody(required = false) TeacherQuery teacherquery) {
-        //TeacherQuery teacherquery){
+                                     //TeacherQuery teacherquery){
         String name = teacherquery.getName();
         Integer level = teacherquery.getLevel();
         String begin = teacherquery.getBegin();
@@ -90,9 +88,7 @@ public class EduTeacherController {
         }
         Page<EduTeacher> teacherPage = eduTeacherService.page(new Page<EduTeacher>(page, limit), queryWrapper);
         Map<String, Object> map = new HashMap<>();
-        map.put("hasNext", teacherPage.hasNext());
-        map.put("hasPrevious", teacherPage.hasPrevious());
-        map.put("totals", teacherPage.getTotal());
+        map.put("total", teacherPage.getTotal());
         map.put("items", teacherPage.getRecords());
         return CommonResult.ok().emptyData().data(map);
     }
