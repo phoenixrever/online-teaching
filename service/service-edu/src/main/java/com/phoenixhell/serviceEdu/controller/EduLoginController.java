@@ -1,9 +1,7 @@
 package com.phoenixhell.serviceEdu.controller;
 
 import com.phoenixhell.utils.CommonResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author phoenixhell
@@ -11,8 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/serviceEdu")
+@CrossOrigin
 public class EduLoginController {
-    @GetMapping("/login")
+    @PostMapping("/login")
     public CommonResult login(){
         return  CommonResult.ok().emptyData().data("token","admin");
     }
