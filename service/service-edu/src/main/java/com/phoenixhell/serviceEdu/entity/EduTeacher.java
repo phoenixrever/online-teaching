@@ -49,7 +49,7 @@ public class EduTeacher implements Serializable {
     private Integer sort;
 
     @ApiModelProperty(value = "逻辑删除 1（true）已删除， 0（false）未删除")
-    @TableLogic //逻辑删除
+    @TableLogic //逻辑删除 3.1.1 開始只要注解就行無需配置插件
     private Integer isDeleted;
 
     @ApiModelProperty(value = "创建时间")
