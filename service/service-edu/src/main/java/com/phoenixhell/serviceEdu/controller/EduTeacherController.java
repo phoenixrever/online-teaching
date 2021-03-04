@@ -84,8 +84,9 @@ public class EduTeacherController {
             queryWrapper.ge("gmt_create", begin);
         }
         if (!StringUtils.isEmpty(end)) {
-            queryWrapper.le("gmt_create", end);
+            queryWrapper.le("gmt_modified", end);
         }
+        queryWrapper.orderBy(true, false, "gmt_modified");
         Page<EduTeacher> teacherPage = eduTeacherService.page(new Page<EduTeacher>(page, limit), queryWrapper);
         Map<String, Object> map = new HashMap<>();
         map.put("total", teacherPage.getTotal());
@@ -120,11 +121,22 @@ public class EduTeacherController {
     @ApiOperation(value = "根据ID 修改讲师")
     @PostMapping("/updateTeacher")
     public CommonResult updateTeacher(@RequestBody EduTeacher eduTeacher) {
+        eduTeacher.setName(null);
         boolean b = eduTeacherService.updateById(eduTeacher);
         if (b) {
             return CommonResult.ok().emptyData().data("修改结果", "修改成功");
         } else {
             return CommonResult.error().emptyData().data("修改结果", "修改失败");
+        }
+    }
+    @ApiOperation(value = "根据name 查詢讲师")
+    @GetMapping("/validateUniqueName/{name}")
+    public CommonResult validateUniqueName(@PathVariable("name") String name) {
+        EduTeacher eduTeacher = eduTeacherService.query().eq(true, "name", name).one();
+        if (eduTeacher==null) {
+            return CommonResult.ok().emptyData().data("查詢结果", "查詢成功");
+        } else {
+            return CommonResult.error().emptyData().data("查詢结果", "查詢失败");
         }
     }
     //视频里面的写法 实测 post 直接改成put 无任何问题

@@ -29,6 +29,8 @@ spring:
 #  type-aliases-package: com.phoenixhell.springcloud.entities
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
+#3.1.1开始不再需要这一步  @TableLogic 即可解決
+#mybatis-plus.global-config.sql-injector=com.baomidou.mybatisplus.mapper.LogicSqlInjector
 #  global-config:
 #    db-config:
 #      id-type: auto
