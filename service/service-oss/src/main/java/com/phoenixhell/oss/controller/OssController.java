@@ -14,7 +14,8 @@ import org.springframework.web.multipart.MultipartFile;
  * @since 2021/3/5 0005-下午 2:11
  */
 @RestController
-@RequestMapping("/eduoss/fileoss ")
+//路徑多了個空格就是跨域
+@RequestMapping("/eduoss/fileoss")
 @CrossOrigin
 public class OssController {
     @Autowired
