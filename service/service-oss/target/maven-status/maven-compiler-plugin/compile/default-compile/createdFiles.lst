@@ -1,0 +1,5 @@
+com\phoenixhell\oss\controller\OssController.class
+com\phoenixhell\oss\service\impl\OssServiceImpl.class
+com\phoenixhell\oss\config\OssPropertiesConfig.class
+com\phoenixhell\oss\ServiceOss8002.class
+com\phoenixhell\oss\service\OssService.class

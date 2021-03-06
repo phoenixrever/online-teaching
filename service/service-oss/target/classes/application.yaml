@@ -1,0 +1,16 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: service-oss
+  servlet:
+    multipart:
+      max-file-size: 50MB
+aliyun:
+  oss:
+    file:
+      endpoint: oss-cn-shanghai.aliyuncs.com
+      key_id: LTAI4G3eAAf3bJ3ezjr3cPv3
+      key_secret: AMswshKGYv3jUeIIY9ds6SsD943NcC
+      #bucket可以在控制台创建，也可以使用java代码创建
+      bucket_name: phoenixhell
