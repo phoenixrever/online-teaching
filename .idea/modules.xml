@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/service/service.iml" filepath="$PROJECT_DIR$/service/service.iml" />
       <module fileurl="file://$PROJECT_DIR$/Common/service-base/service-base.iml" filepath="$PROJECT_DIR$/Common/service-base/service-base.iml" />
       <module fileurl="file://$PROJECT_DIR$/service/service-edu/service-edu.iml" filepath="$PROJECT_DIR$/service/service-edu/service-edu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service/service-oss/service-oss.iml" filepath="$PROJECT_DIR$/service/service-oss/service-oss.iml" />
       <module fileurl="file://$PROJECT_DIR$/Common/utils/utils.iml" filepath="$PROJECT_DIR$/Common/utils/utils.iml" />
     </modules>
   </component>
