@@ -55,7 +55,7 @@ public class EduTeacher implements Serializable {
     @ApiModelProperty(value = "创建时间")
     @TableField(fill = FieldFill.INSERT)
     private Date gmtCreate;
-
+    //MetaObjectHandler 配置了才有用 timestamp更好？
     @ApiModelProperty(value = "更新时间")
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date gmtModified;
