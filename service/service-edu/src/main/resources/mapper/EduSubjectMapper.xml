@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.phoenixhell.serviceEdu.mapper.EduSubjectMapper">
-
+    <resultMap id="allSubject" type="com.phoenixhell.serviceEdu.entity.OneSubject">
+        <id column="id" property="id"/>
+        <result column="title" property="label"/>
+        <collection property="children" ofType="com.phoenixhell.serviceEdu.entity.TwoSubject">
+            <id column="did" property="id"/>
+            <result column="d_title" property="label"/>
+        </collection>
+    </resultMap>
+    <select id="getAllSubject" resultMap="allSubject">
+        <!--同表查询 意义不知道在哪 -->
+        SELECT e.id,e.title,d.id did,d.title d_title
+        FROM edu_subject e
+        JOIN edu_subject d
+        ON e.id=d.parent_id
+    </select>
 </mapper>

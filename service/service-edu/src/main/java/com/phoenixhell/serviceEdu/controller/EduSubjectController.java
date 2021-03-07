@@ -4,18 +4,17 @@ package com.phoenixhell.serviceEdu.controller;
 import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.annotation.ExcelProperty;
 import com.phoenixhell.serviceEdu.entity.EduSubject;
+import com.phoenixhell.serviceEdu.entity.OneSubject;
 import com.phoenixhell.serviceEdu.listener.EasyExcelReadListener;
 import com.phoenixhell.serviceEdu.service.EduSubjectService;
 import com.phoenixhell.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.List;
 
 /**
  * <p>
@@ -42,6 +41,11 @@ public class EduSubjectController {
             return CommonResult.error().emptyData().data("error",e.getMessage());
         }
         return CommonResult.ok();
+    }
+    @GetMapping("/getAllSubject")
+    public CommonResult getAllSubject(){
+        List<OneSubject> allSubject = eduSubjectService.getAllSubject();
+        return CommonResult.ok().emptyData().data("data",allSubject);
     }
 }
 

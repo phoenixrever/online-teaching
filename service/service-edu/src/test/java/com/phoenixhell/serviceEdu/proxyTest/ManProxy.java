@@ -1,6 +1,5 @@
 package com.phoenixhell.serviceEdu.proxyTest;
 
-import sun.security.jca.GetInstance;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
