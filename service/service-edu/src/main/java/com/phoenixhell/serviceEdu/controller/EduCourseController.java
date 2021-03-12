@@ -2,8 +2,8 @@ package com.phoenixhell.serviceEdu.controller;
 
 
 import com.phoenixhell.serviceEdu.entity.vo.Course;
+import com.phoenixhell.serviceEdu.service.EduCourseDescriptionService;
 import com.phoenixhell.serviceEdu.service.EduCourseService;
-import com.phoenixhell.serviceEdu.service.impl.EduCourseServiceImpl;
 import com.phoenixhell.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -22,13 +22,26 @@ import org.springframework.web.bind.annotation.*;
 public class EduCourseController {
     @Autowired
     private EduCourseService eduCourseService;
+    @Autowired
+    private EduCourseDescriptionService eduCourseDescriptionService;
+
     @PostMapping("add")
-    public CommonResult addCourse(@RequestBody Course course){
+    public CommonResult addCourse(@RequestBody Course course) {
         String id = eduCourseService.saveCourse(course);
-        if (id!=null) {
+        if (id != null) {
             return CommonResult.ok().emptyData().data("id", id);
         } else {
             return CommonResult.error().emptyData().data("添加结果", "添加失败");
+        }
+    }
+
+    @GetMapping("get/{id}")
+    public CommonResult addCourse(@PathVariable("id") String id) {
+        Course course = eduCourseService.getCourseById(id);
+        if (course != null) {
+            return CommonResult.ok().emptyData().data("courseInfo", course);
+        } else {
+            return CommonResult.error().emptyData().data("查询结果", "查询失败");
         }
     }
 }

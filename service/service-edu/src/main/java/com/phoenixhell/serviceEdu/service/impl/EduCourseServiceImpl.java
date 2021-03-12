@@ -27,6 +27,8 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
     @Resource
     private EduCourse eduCourse;
     @Resource
+    private Course course;
+    @Resource
     private EduCourseDescription eduCourseDescription;
     @Resource
     private EduCourseDescriptionService eduCourseDescriptionService;
@@ -46,4 +48,14 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
         }
         return eduCourseDescription.getId();
     }
+
+    @Override
+    public Course getCourseById(String id) {
+        EduCourse eduCourse = this.getById(id);
+        EduCourseDescription eduCourseDescription = eduCourseDescriptionService.getById(id);
+        BeanUtils.copyProperties(eduCourse, course);
+        course.setDescription(eduCourseDescription.getDescription());
+        return course;
+    }
+
 }
