@@ -4,12 +4,15 @@ import com.aliyun.oss.OSS;
 import com.aliyun.oss.OSSClientBuilder;
 import com.phoenixhell.oss.config.OssPropertiesConfig;
 import com.phoenixhell.oss.service.OssService;
+import com.phoenixhell.servicebase.exceptionhandler.MyException;
 import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.DigestUtils;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.activation.MimetypesFileTypeMap;
+import javax.imageio.ImageIO;
+import java.awt.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.UUID;
@@ -23,7 +26,10 @@ public class OssServiceImpl implements OssService {
     @Autowired
     private OssPropertiesConfig ossPropertiesConfig;
     @Override
-    public String uploadFileToOss(MultipartFile file) {
+    public String uploadFileToOss(MultipartFile file,String folder) {
+//        if(isImage(file)){
+//            throw new MyException(20001,"must a image");
+//        }
         // Endpoint以杭州为例，其它Region请按实际情况填写。
         String endpoint =ossPropertiesConfig.getEndPoint();
         // 阿里云主账号AccessKey拥有所有API的访问权限，风险很高。强烈建议您创建并使用RAM账号进行API访问或日常运维，请登录RAM控制台创建RAM账号。
@@ -39,7 +45,7 @@ public class OssServiceImpl implements OssService {
         assert oldFileName != null;
         String fileName = UUID.randomUUID().toString().replaceAll("-","")+"."+oldFileName.substring(oldFileName.lastIndexOf(".")+1);
         String datePath=new DateTime().toString("yyyy/MM/dd");
-        String fullFileName=datePath+"/"+fileName;
+        String fullFileName=datePath+"/"+folder+"/"+fileName;
         OSS ossClient = null;
         try {
             // 创建OSSClient实例。
@@ -60,5 +66,25 @@ public class OssServiceImpl implements OssService {
         String fileUrl="https://"+bucketName+"."+endpoint+"/"+fullFileName;
         System.out.println(fileUrl);
         return fileUrl;
+    }
+
+    /**
+     * 通过读取文件并获取其width及height的方式，来判断判断当前文件是否图片，这是一种非常简单的方式。
+     * @param imageFile
+     * @return
+     */
+    public static boolean isImage(MultipartFile imageFile) {
+        Image img = null;
+        try {
+            img = ImageIO.read(imageFile.getInputStream());
+            if (img == null || img.getWidth(null) <= 0 || img.getHeight(null) <= 0) {
+                return false;
+            }
+            return true;
+        } catch (Exception e) {
+            return false;
+        } finally {
+            img = null;
+        }
     }
 }

@@ -8,6 +8,7 @@ com\phoenixhell\serviceEdu\ServiceEdu8001.class
 com\phoenixhell\serviceEdu\entity\EduVideo.class
 com\phoenixhell\serviceEdu\entity\OneSubject.class
 com\phoenixhell\serviceEdu\controller\EduChapterController.class
+com\phoenixhell\serviceEdu\entity\vo\Course.class
 com\phoenixhell\serviceEdu\mapper\EduCourseMapper.class
 com\phoenixhell\serviceEdu\controller\EduCourseController.class
 com\phoenixhell\serviceEdu\entity\EduTeacher.class

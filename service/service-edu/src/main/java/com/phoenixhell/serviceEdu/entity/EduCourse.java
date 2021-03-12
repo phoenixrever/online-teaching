@@ -1,14 +1,19 @@
 package com.phoenixhell.serviceEdu.entity;
 
 import java.math.BigDecimal;
+
+import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
 import java.util.Date;
+
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import org.springframework.stereotype.Component;
 
 /**
  * <p>
@@ -18,6 +23,7 @@ import lombok.EqualsAndHashCode;
  * @author testjava
  * @since 2021-03-10
  */
+@Component
 @Data
 @EqualsAndHashCode(callSuper = false)
 @ApiModel(value="EduCourse对象", description="课程")
@@ -33,10 +39,12 @@ public class EduCourse implements Serializable {
     private String teacherId;
 
     @ApiModelProperty(value = "课程专业ID")
-    private String subjectId;
+    @TableField("subject_id")
+    private String twoSubjectId;
 
     @ApiModelProperty(value = "课程专业父级ID")
-    private String subjectParentId;
+    @TableField("subject_parent_id")
+    private String oneSubjectId;
 
     @ApiModelProperty(value = "课程标题")
     private String title;
@@ -66,9 +74,11 @@ public class EduCourse implements Serializable {
     private Integer isDeleted;
 
     @ApiModelProperty(value = "创建时间")
+    @TableField(fill = FieldFill.INSERT)
     private Date gmtCreate;
 
     @ApiModelProperty(value = "更新时间")
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date gmtModified;
 
 

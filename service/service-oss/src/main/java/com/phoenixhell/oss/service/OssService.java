@@ -8,5 +8,5 @@ import org.springframework.web.multipart.MultipartFile;
  */
 
 public interface OssService {
-    String uploadFileToOss(MultipartFile file);
+    String uploadFileToOss(MultipartFile file,String folder);
 }
