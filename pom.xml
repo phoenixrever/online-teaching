@@ -207,16 +207,16 @@
 <!--                <artifactId>aliyun-sdk-vod-upload</artifactId>-->
 <!--                <version>${aliyun-sdk-vod-upload.version}</version>-->
 <!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>com.alibaba</groupId>-->
-<!--                <artifactId>fastjson</artifactId>-->
-<!--                <version>${fastjson.version}</version>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>org.json</groupId>-->
-<!--                <artifactId>json</artifactId>-->
-<!--                <version>${json.version}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.json</groupId>
+                <artifactId>json</artifactId>
+                <version>${json.version}</version>
+            </dependency>
 
 <!--            <dependency>-->
 <!--                <groupId>commons-dbutils</groupId>-->

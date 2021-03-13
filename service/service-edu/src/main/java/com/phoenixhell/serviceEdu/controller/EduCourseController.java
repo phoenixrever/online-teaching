@@ -2,7 +2,6 @@ package com.phoenixhell.serviceEdu.controller;
 
 
 import com.phoenixhell.serviceEdu.entity.vo.Course;
-import com.phoenixhell.serviceEdu.service.EduCourseDescriptionService;
 import com.phoenixhell.serviceEdu.service.EduCourseService;
 import com.phoenixhell.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +21,6 @@ import org.springframework.web.bind.annotation.*;
 public class EduCourseController {
     @Autowired
     private EduCourseService eduCourseService;
-    @Autowired
-    private EduCourseDescriptionService eduCourseDescriptionService;
 
     @PostMapping("add")
     public CommonResult addCourse(@RequestBody Course course) {
@@ -42,6 +39,16 @@ public class EduCourseController {
             return CommonResult.ok().emptyData().data("courseInfo", course);
         } else {
             return CommonResult.error().emptyData().data("查询结果", "查询失败");
+        }
+    }
+
+    @PutMapping("update")
+    public CommonResult updateCourse(@RequestBody Course course) {
+        Boolean aBoolean = eduCourseService.updateCourseById(course);
+        if (aBoolean) {
+            return CommonResult.ok().emptyData().data("修改结果", "修改成功");
+        } else {
+            return CommonResult.error().emptyData().data("修改结果", "修改失败");
         }
     }
 }

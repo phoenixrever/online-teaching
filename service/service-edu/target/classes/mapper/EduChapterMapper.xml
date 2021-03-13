@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.phoenixhell.serviceEdu.mapper.EduChapterMapper">
-
+    <resultMap id="getChapter"  type="com.phoenixhell.serviceEdu.entity.EduChapter">
+        <id column="id" property="id"/>
+        <result column="title" property="title"/>
+        <collection property="list" ofType="com.phoenixhell.serviceEdu.entity.EduVideo">
+            <id column="vid" property="id"/>
+            <result column="v_title" property="title"/>
+        </collection>
+    </resultMap>
+    <select id="getChapterById" resultMap="getChapter">
+        select c.id id,v.id vid,c.title title, v.title v_title
+        from edu_chapter c
+        join edu_video v
+        on c.id=v.chapter_id
+        where c.course_id=#{id}
+    </select>
 </mapper>

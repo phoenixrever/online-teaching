@@ -58,4 +58,21 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
         return course;
     }
 
+    @Override
+    @Transactional
+    public Boolean updateCourseById(Course course) {
+        BeanUtils.copyProperties(course,eduCourse);
+        boolean update = this.updateById(eduCourse);
+        if(!update){
+            throw new MyException(20001,"更新课程信息失败");
+        }
+        eduCourseDescription.setDescription(course.getDescription());
+        BeanUtils.copyProperties(eduCourse,eduCourseDescription);
+        boolean updateDescription = eduCourseDescriptionService.updateById(eduCourseDescription);
+        if(!updateDescription){
+            throw new MyException(20001,"保存课程信息失败");
+        }
+        return true;
+    }
+
 }
