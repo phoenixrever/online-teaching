@@ -2,6 +2,7 @@ package com.phoenixhell.serviceEdu.service;
 
 import com.phoenixhell.serviceEdu.entity.EduCourse;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.phoenixhell.serviceEdu.entity.vo.CompleteCourseInfo;
 import com.phoenixhell.serviceEdu.entity.vo.Course;
 
 /**
@@ -17,4 +18,5 @@ public interface EduCourseService extends IService<EduCourse> {
     String saveCourse(Course course);
     Course getCourseById(String id);
     Boolean updateCourseById(Course course);
+    CompleteCourseInfo getCompleteCourseInfoById(String id);
 }

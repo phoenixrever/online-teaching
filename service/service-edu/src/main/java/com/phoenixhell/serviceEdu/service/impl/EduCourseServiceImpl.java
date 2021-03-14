@@ -2,6 +2,7 @@ package com.phoenixhell.serviceEdu.service.impl;
 
 import com.phoenixhell.serviceEdu.entity.EduCourse;
 import com.phoenixhell.serviceEdu.entity.EduCourseDescription;
+import com.phoenixhell.serviceEdu.entity.vo.CompleteCourseInfo;
 import com.phoenixhell.serviceEdu.entity.vo.Course;
 import com.phoenixhell.serviceEdu.mapper.EduCourseMapper;
 import com.phoenixhell.serviceEdu.service.EduCourseDescriptionService;
@@ -32,6 +33,8 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
     private EduCourseDescription eduCourseDescription;
     @Resource
     private EduCourseDescriptionService eduCourseDescriptionService;
+    @Resource
+    private EduCourseMapper eduCourseMapper;
     @Override
     @Transactional
     public String saveCourse(Course course) {
@@ -75,4 +78,8 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
         return true;
     }
 
+    @Override
+    public CompleteCourseInfo getCompleteCourseInfoById(String id) {
+        return eduCourseMapper.getCompleteCourseInfoById(id);
+    }
 }

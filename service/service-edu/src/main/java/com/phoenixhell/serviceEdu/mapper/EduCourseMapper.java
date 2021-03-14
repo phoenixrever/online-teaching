@@ -1,7 +1,8 @@
 package com.phoenixhell.serviceEdu.mapper;
 
-import com.phoenixhell.serviceEdu.entity.EduCourse;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.phoenixhell.serviceEdu.entity.EduCourse;
+import com.phoenixhell.serviceEdu.entity.vo.CompleteCourseInfo;
 
 /**
  * <p>
@@ -12,4 +13,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @since 2021-03-10
  */
 public interface EduCourseMapper extends BaseMapper<EduCourse> {
+    CompleteCourseInfo getCompleteCourseInfoById(String id);
 }

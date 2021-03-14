@@ -1,6 +1,8 @@
 package com.phoenixhell.serviceEdu.controller;
 
 
+import com.phoenixhell.serviceEdu.entity.EduCourse;
+import com.phoenixhell.serviceEdu.entity.vo.CompleteCourseInfo;
 import com.phoenixhell.serviceEdu.entity.vo.Course;
 import com.phoenixhell.serviceEdu.service.EduCourseService;
 import com.phoenixhell.utils.CommonResult;
@@ -50,6 +52,19 @@ public class EduCourseController {
         } else {
             return CommonResult.error().emptyData().data("修改结果", "修改失败");
         }
+    }
+    @GetMapping("/publish/{id}")
+    public CommonResult publish(@PathVariable("id")String id){
+        CompleteCourseInfo completeCourseInfo = eduCourseService.getCompleteCourseInfoById(id);
+        return CommonResult.ok().emptyData().data("completeCourseInfo",completeCourseInfo);
+    }
+    @PutMapping("/publishCourse/{id}")
+    public CommonResult publishCourse(@PathVariable("id")String id){
+        EduCourse eduCourse = new EduCourse();
+        eduCourse.setId(id);
+        eduCourse.setStatus("Normal");
+        eduCourseService.updateById(eduCourse);
+        return CommonResult.ok().emptyData();
     }
 }
 
