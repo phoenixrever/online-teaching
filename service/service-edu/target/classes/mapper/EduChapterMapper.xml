@@ -12,7 +12,7 @@
     <select id="getChapterById" resultMap="getChapter">
         select c.id id,v.id vid,c.title title, v.title v_title
         from edu_chapter c
-        join edu_video v
+        left join edu_video v
         on c.id=v.chapter_id
         where c.course_id=#{id}
     </select>

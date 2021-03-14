@@ -43,6 +43,12 @@ public class CommonResult {
         commonResult.setMessage("失败");
         return commonResult;
     }
+    public static CommonResult error(String message) {
+        commonResult.setSuccess(false);
+        commonResult.setCode(StatusCode.ERROR);
+        commonResult.setMessage(message);
+        return commonResult;
+    }
     public CommonResult emptyData(){
         commonResult.getData().clear();
         return commonResult;

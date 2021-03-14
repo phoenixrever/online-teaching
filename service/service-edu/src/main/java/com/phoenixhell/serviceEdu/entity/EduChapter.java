@@ -50,5 +50,6 @@ public class EduChapter implements Serializable {
     @ApiModelProperty(value = "更新时间")
     private Date gmtModified;
 
+    @TableField(exist = false)
     private List<EduVideo> list;
 }

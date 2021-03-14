@@ -55,6 +55,7 @@ public class EduChapterController {
             String chapterJson = JSONObject.toJSONString(chapterVideos.get("chapter"));
             EduChapter eduChapter = JSON.parseObject(chapterJson, new TypeReference<EduChapter>() {
             });
+//            EduChapter eduChapter = JSON.parseObject(chapterJson, EduChapter.class);
             boolean save = eduChapterService.save(eduChapter);
             if (chapterVideos.get("chapterVideos") != null && save) {
                 String chapterVideosJson = JSONObject.toJSONString(chapterVideos.get("chapterVideos"));
@@ -67,6 +68,28 @@ public class EduChapterController {
             }
         }
         return CommonResult.ok();
+    }
+
+
+    @DeleteMapping("/delete/{id}")
+    public CommonResult deleteChapterById(@PathVariable("id") String id){
+        Integer count = eduVideoService.query().eq("chapter_id", id).count();
+        if(count<1){
+            boolean b = eduChapterService.removeById(id);
+            if (b) {
+                return CommonResult.ok().emptyData().data("删除结果", "删除成功");
+            } else {
+                return CommonResult.ok().emptyData().data("删除结果", "删除失败");
+            }
+        }else{
+            return CommonResult.error("有子节点不能删除").emptyData();
+        }
+    }
+
+    @PutMapping("/edit")
+    public CommonResult updateChapterById(@RequestBody EduChapter eduChapter) {
+         eduChapterService.updateById(eduChapter);
+        return CommonResult.ok().emptyData().data("修改结果", "修改成功");
     }
 }
 
