@@ -21,6 +21,7 @@ E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\mapper\EduTeacherMapper.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\controller\EduCourseController.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\controller\EduLoginController.java
+E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\entity\vo\CompleteCourseInfo.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\controller\EduSubjectController.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\mapper\EduCourseMapper.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\controller\EduTeacherController.java

@@ -1,6 +1,6 @@
 package com.phoenixhell.utils;
 
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.annotations .ApiModelProperty;
 import lombok.Data;
 
 import java.util.HashMap;
