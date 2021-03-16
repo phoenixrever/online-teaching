@@ -1,4 +1,4 @@
-package com.phoenixhell.serviceVod;
+package com.phoenixhell.serviceVod.util;
 
 import com.aliyun.vod.upload.impl.UploadVideoImpl;
 import com.aliyun.vod.upload.req.UploadVideoRequest;
