@@ -3,6 +3,11 @@ package com.phoenixhell.serviceVod.Listener;
 import com.aliyun.oss.event.ProgressEvent;
 import com.aliyun.oss.event.ProgressEventType;
 import com.aliyun.vod.upload.impl.VoDProgressListener;
+import com.phoenixhell.serviceVod.util.ProgressBar;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import java.util.HashMap;
 
 /**
  * 上传进度回调方法类
@@ -11,8 +16,9 @@ import com.aliyun.vod.upload.impl.VoDProgressListener;
  * 当创建音视频信息成功后，此上传进度回调中的videoId为本次上传生成的视频ID，您可以根据视频ID进行音视频管理。
  * 当创建图片信息成功后，此上传进度回调中的ImageId为本次上传生成的图片ID，您可以根据视频ID进行图片管理。
  */
-
-public class ProcessListener implements VoDProgressListener {
+public class ProgressListener implements VoDProgressListener {
+    @Autowired
+    private ProgressBar progressBar;
     /**
      * 已成功上传至OSS的字节数
      */
@@ -41,7 +47,7 @@ public class ProcessListener implements VoDProgressListener {
             // 开始上传事件
             case TRANSFER_STARTED_EVENT:
                 if (videoId != null) {
-                    System.out.println("qqqqStart to upload videoId " + videoId + "......");
+                    System.out.println("--------Start to upload videoId " + videoId + "......");
                 }
                 if (imageId != null) {
                     System.out.println("aaaStart to upload imageId " + imageId + "......");
@@ -60,6 +66,13 @@ public class ProcessListener implements VoDProgressListener {
                     System.out.println(bytes + " bytes have been written at this time, upload progress: " +
                             percent + "%(" + this.bytesWritten + "/" + this.totalBytes + ")");
                 } else {
+                    int percent = (int) (this.bytesWritten * 100.0 / this.totalBytes);
+                    HashMap<String, Integer> map = new HashMap<>();
+                    map.put("admin",percent);
+                    progressBar.setPercentMap(map);
+                    System.out.println("-----------listener--------------");
+                    System.out.println(progressBar.getPercentMap().get("admin"));
+                    System.out.println("-----------listener--------------");
                     System.out.println(bytes + " bytes have been written at this time, upload sub total : " +
                             "(" + this.bytesWritten + ")");
                 }
