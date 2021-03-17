@@ -4,10 +4,8 @@ import com.aliyun.oss.event.ProgressEvent;
 import com.aliyun.oss.event.ProgressEventType;
 import com.aliyun.vod.upload.impl.VoDProgressListener;
 import com.phoenixhell.serviceVod.util.ProgressBar;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
-import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 上传进度回调方法类
@@ -16,9 +14,9 @@ import java.util.HashMap;
  * 当创建音视频信息成功后，此上传进度回调中的videoId为本次上传生成的视频ID，您可以根据视频ID进行音视频管理。
  * 当创建图片信息成功后，此上传进度回调中的ImageId为本次上传生成的图片ID，您可以根据视频ID进行图片管理。
  */
+
+//不是spring管理的  获取不倒容器中progressBar
 public class ProgressListener implements VoDProgressListener {
-    @Autowired
-    private ProgressBar progressBar;
     /**
      * 已成功上传至OSS的字节数
      */
@@ -59,6 +57,8 @@ public class ProgressListener implements VoDProgressListener {
                 System.out.println(this.totalBytes + "bytes in total will be uploaded to OSS.");
                 break;
             // 已经上传成功文件大小事件通知
+            case RESPONSE_CONTENT_LENGTH_EVENT:
+                break;
             case REQUEST_BYTE_TRANSFER_EVENT:
                 this.bytesWritten += bytes;
                 if (this.totalBytes != -1) {
@@ -66,13 +66,9 @@ public class ProgressListener implements VoDProgressListener {
                     System.out.println(bytes + " bytes have been written at this time, upload progress: " +
                             percent + "%(" + this.bytesWritten + "/" + this.totalBytes + ")");
                 } else {
-                    int percent = (int) (this.bytesWritten * 100.0 / this.totalBytes);
-                    HashMap<String, Integer> map = new HashMap<>();
-                    map.put("admin",percent);
-                    progressBar.setPercentMap(map);
-                    System.out.println("-----------listener--------------");
-                    System.out.println(progressBar.getPercentMap().get("admin"));
-                    System.out.println("-----------listener--------------");
+                    Map<String, String> percentMap = ProgressBar.getPercentMap();
+                    percentMap.put("admin",String.valueOf(this.bytesWritten));
+                    System.out.println(percentMap);
                     System.out.println(bytes + " bytes have been written at this time, upload sub total : " +
                             "(" + this.bytesWritten + ")");
                 }
@@ -97,6 +93,26 @@ public class ProgressListener implements VoDProgressListener {
                 }
                 break;
 
+            case RESPONSE_BYTE_TRANSFER_EVENT:
+                break;
+            case TRANSFER_PREPARING_EVENT:
+                break;
+            case TRANSFER_CANCELED_EVENT:
+                break;
+            case TRANSFER_PART_STARTED_EVENT:
+                break;
+            case TRANSFER_PART_COMPLETED_EVENT:
+                break;
+            case TRANSFER_PART_FAILED_EVENT:
+                break;
+            case SELECT_STARTED_EVENT:
+                break;
+            case SELECT_SCAN_EVENT:
+                break;
+            case SELECT_COMPLETED_EVENT:
+                break;
+            case SELECT_FAILED_EVENT:
+                break;
             default:
                 break;
         }

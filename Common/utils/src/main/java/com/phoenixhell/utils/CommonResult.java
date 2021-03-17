@@ -29,6 +29,7 @@ public class CommonResult {
 
     @ApiModelProperty(value = "返回数据")
     private Map<String, Object> data = new HashMap<String, Object>();
+    private Map<String, String> stringMapData = new HashMap<String, String>();
 
     public static CommonResult ok() {
         commonResult.setSuccess(true);
@@ -59,6 +60,10 @@ public class CommonResult {
     }
     public static CommonResult data(Map<String,Object> map){
         commonResult.setData(map);
+        return commonResult;
+    }
+    public static CommonResult stringData(Map<String,String> map){
+        commonResult.setStringMapData(map);
         return commonResult;
     }
 

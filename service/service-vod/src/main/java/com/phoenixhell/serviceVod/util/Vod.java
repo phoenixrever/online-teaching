@@ -7,7 +7,10 @@ import com.aliyun.vod.upload.resp.UploadStreamResponse;
 import com.aliyun.vod.upload.resp.UploadVideoResponse;
 import com.aliyuncs.DefaultAcsClient;
 import com.aliyuncs.profile.DefaultProfile;
-import com.aliyuncs.vod.model.v20170321.*;
+import com.aliyuncs.vod.model.v20170321.GetPlayInfoRequest;
+import com.aliyuncs.vod.model.v20170321.GetPlayInfoResponse;
+import com.aliyuncs.vod.model.v20170321.GetVideoPlayAuthRequest;
+import com.aliyuncs.vod.model.v20170321.GetVideoPlayAuthResponse;
 import com.phoenixhell.serviceVod.Listener.ProgressListener;
 
 import java.io.InputStream;
@@ -112,6 +115,7 @@ public class Vod {
      */
     public static UploadStreamResponse UploadStreamVideo(String accessKeyId, String accessKeySecret, String title, String fileName, InputStream inputStream) {
         UploadStreamRequest request = new UploadStreamRequest(accessKeyId, accessKeySecret, title, fileName, inputStream);
+        System.out.println(request);
         /* 是否使用默认水印(可选)，指定模板组ID时，根据模板组配置确定是否使用默认水印*/
         //request.setShowWaterMark(true);
         /* 自定义消息回调设置，参数说明参考文档 https://help.aliyun.com/document_detail/86952.html#UserData */
@@ -131,7 +135,7 @@ public class Vod {
         /* 存储区域(可选) */
         //request.setStorageLocation("in-201703232118266-5sejdln9o.oss-cn-shanghai.aliyuncs.com");
         /* 开启默认上传进度回调 */
-         request.setPrintProgress(true);
+//         request.setPrintProgress(true);
         /* 设置自定义上传进度回调 (必须继承 VoDProgressListener) */
 //         request.setProgressListener(new PutObjectProgressListener());
          request.setProgressListener(new ProgressListener());

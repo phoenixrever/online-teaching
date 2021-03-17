@@ -3,46 +3,47 @@ package com.phoenixhell.serviceVod.controller;
 import com.phoenixhell.serviceVod.service.VideoUploadService;
 import com.phoenixhell.serviceVod.util.ProgressBar;
 import com.phoenixhell.utils.CommonResult;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.FutureTask;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/course/video")
+@RequestMapping("/serviceVod/video")
 public class VideoUploadController {
     @Autowired
     private VideoUploadService videoUploadService;
-    @Autowired
-    private ProgressBar progressBar;
+//    @Autowired
+//    private ProgressBar progressBar;
 
     @PostMapping("/videoUpload")
-    public CommonResult fileUpload(MultipartFile file){
-        if(file==null){
+    public CommonResult fileUpload(MultipartFile file) throws ExecutionException, InterruptedException {
+        if (file == null) {
             return CommonResult.error();
         }
-        Map<String, String> map =null;
+        FutureTask<Map<String, String>> mapFutureTask = new FutureTask<>(() -> {
+            Map<String, String> map = videoUploadService.videoStreamUpload(file);
+            return map;
+        });
         try {
-          map = videoUploadService.videoStreamUpload(file);
-        } catch (IOException e) {
+            new Thread(mapFutureTask,"AAA").start();
+        } catch (Exception e) {
             e.printStackTrace();
         }
-        Map<String,Object>  objectMap=new HashMap<>();
-        BeanUtils.copyProperties(map,objectMap);
-        return  CommonResult.ok().emptyData().data(objectMap);
+        Map<String, String> map = mapFutureTask.get();
+        System.out.println("-------------");
+        System.out.println(map);
+        return CommonResult.ok().emptyData().stringData(map);
     }
+
     @GetMapping("/uploadProgress")
-    public CommonResult uploadProgress(){
-        HashMap<String, Object> objectHashMap = new HashMap<>();
-        System.out.println("---------------------------");
-        System.out.println(progressBar.getPercentMap().get("admin"));
-        System.out.println("---------------------------");
-        objectHashMap.put("admin",(Object) progressBar.getPercentMap().get("admin"));
-        return CommonResult.ok().emptyData().data(objectHashMap);
+    public CommonResult uploadProgress() {
+        Map<String, String> percentMap = ProgressBar.getPercentMap();
+        System.out.println(percentMap + "****************");
+        return CommonResult.ok().emptyData().stringData(percentMap);
     }
 }
