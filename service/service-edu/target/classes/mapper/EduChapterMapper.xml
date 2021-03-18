@@ -4,13 +4,19 @@
     <resultMap id="getChapter"  type="com.phoenixhell.serviceEdu.entity.EduChapter">
         <id column="id" property="id"/>
         <result column="title" property="title"/>
+        <result column="sort" property="sort"/>
         <collection property="list" ofType="com.phoenixhell.serviceEdu.entity.EduVideo">
             <id column="vid" property="id"/>
             <result column="v_title" property="title"/>
+            <result column="videoSourceId" property="videoSourceId"/>
+            <result column="videoOriginalName" property="videoOriginalName"/>
+            <result column="v_sort" property="sort"/>
+            <result column="v_is_free" property="isFree"/>
         </collection>
     </resultMap>
     <select id="getChapterById" resultMap="getChapter">
-        select c.id id,v.id vid,c.title title, v.title v_title
+        select c.id id,v.id vid,c.sort sort,c.title title, v.title v_title,v.video_source_id videoSourceId,v.video_original_name videoOriginalName,
+        v.sort v_sort,v.is_free v_is_free
         from edu_chapter c
         left join edu_video v
         on c.id=v.chapter_id

@@ -1,4 +1,5 @@
 com\phoenixhell\servicebase\exceptionhandler\MyException.class
 com\phoenixhell\servicebase\handler\MyMetaObjectHandler.class
+com\phoenixhell\servicebase\config\UploadFileSizeConfig.class
 com\phoenixhell\servicebase\config\SwaggerConfig.class
 com\phoenixhell\servicebase\exceptionhandler\GlobalExceptionHandler.class

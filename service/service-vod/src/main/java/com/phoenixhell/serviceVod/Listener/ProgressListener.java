@@ -67,6 +67,7 @@ public class ProgressListener implements VoDProgressListener {
                             percent + "%(" + this.bytesWritten + "/" + this.totalBytes + ")");
                 } else {
                     Map<String, String> percentMap = ProgressBar.getPercentMap();
+                    percentMap.put("status","on");
                     percentMap.put("admin",String.valueOf(this.bytesWritten));
                     System.out.println(percentMap);
                     System.out.println(bytes + " bytes have been written at this time, upload sub total : " +
@@ -77,6 +78,9 @@ public class ProgressListener implements VoDProgressListener {
             case TRANSFER_COMPLETED_EVENT:
                 this.succeed = true;
                 if (videoId != null) {
+                    Map<String, String> percentMap = ProgressBar.getPercentMap();
+                    percentMap.put("admin","-1");
+                    percentMap.put("status","off");
                     System.out.println("Succeed to upload videoId " + videoId + " , " + this.bytesWritten + " bytes have been transferred in total.");
                 }
                 if (imageId != null) {
