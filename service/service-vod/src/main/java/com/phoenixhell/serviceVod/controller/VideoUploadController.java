@@ -39,6 +39,11 @@ public class VideoUploadController {
         System.out.println(map);
         return CommonResult.ok().emptyData().stringData(map);
     }
+    @DeleteMapping("/delete/{videoId}")
+    public CommonResult deleteByVideoId(@PathVariable("videoId") String videoId){
+        String videoId1 = videoUploadService.deleteByVideoId(videoId);
+        return CommonResult.ok().emptyData().data("videoId",videoId1);
+    }
 
     @GetMapping("/uploadProgress")
     public CommonResult uploadProgress() {

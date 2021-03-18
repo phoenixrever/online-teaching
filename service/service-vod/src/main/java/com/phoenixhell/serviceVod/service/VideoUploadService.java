@@ -7,4 +7,5 @@ import java.util.Map;
 
 public interface VideoUploadService {
     public Map<String, String> videoStreamUpload(MultipartFile file) throws IOException;
+    public String deleteByVideoId(String videoIds);
 }

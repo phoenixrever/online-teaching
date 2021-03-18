@@ -7,10 +7,7 @@ import com.aliyun.vod.upload.resp.UploadStreamResponse;
 import com.aliyun.vod.upload.resp.UploadVideoResponse;
 import com.aliyuncs.DefaultAcsClient;
 import com.aliyuncs.profile.DefaultProfile;
-import com.aliyuncs.vod.model.v20170321.GetPlayInfoRequest;
-import com.aliyuncs.vod.model.v20170321.GetPlayInfoResponse;
-import com.aliyuncs.vod.model.v20170321.GetVideoPlayAuthRequest;
-import com.aliyuncs.vod.model.v20170321.GetVideoPlayAuthResponse;
+import com.aliyuncs.vod.model.v20170321.*;
 import com.phoenixhell.serviceVod.Listener.ProgressListener;
 
 import java.io.InputStream;
@@ -148,5 +145,18 @@ public class Vod {
         UploadVideoImpl uploader = new UploadVideoImpl();
         UploadStreamResponse response = uploader.uploadStream(request);
         return response;
+    }
+
+    /**
+     * 删除视频
+     * @param client 发送请求客户端
+     * @return DeleteVideoResponse 删除视频响应数据
+     * @throws Exception
+     */
+    public static DeleteVideoResponse deleteVideo(DefaultAcsClient client,String videoIds) throws Exception {
+        DeleteVideoRequest request = new DeleteVideoRequest();
+        //支持传入多个视频ID，多个用逗号分隔
+        request.setVideoIds(videoIds);
+        return client.getAcsResponse(request);
     }
 }
