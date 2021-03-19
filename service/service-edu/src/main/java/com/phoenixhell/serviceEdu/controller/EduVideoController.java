@@ -47,11 +47,14 @@ public class EduVideoController {
             commonResult = vodService.deleteByVideoId(videoSourceId);
             System.out.println(commonResult);
         }
-        if (b && commonResult.getSuccess() == true) {
-            return CommonResult.ok().emptyData().data("删除结果", "删除成功");
-        } else {
+        if (commonResult.getSuccess() == false){
+            throw new MyException(20001,"hystrix callback");
+        }
+        if (!b) {
             throw new MyException(20001, "事务错误");
         }
+        return CommonResult.ok().emptyData().data("删除结果", "删除成功");
+
     }
 
     @PutMapping("/edit")

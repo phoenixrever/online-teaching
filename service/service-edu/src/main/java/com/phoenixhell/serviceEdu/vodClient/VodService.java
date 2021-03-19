@@ -4,7 +4,6 @@ import com.phoenixhell.utils.CommonResult;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 /**
@@ -12,7 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @since 2021/3/19 0019-上午 10:46
  */
 @Component
-@FeignClient(value="server-vod")
+@FeignClient(value="server-vod",fallback = VodServiceFallBack.class)
 public interface VodService {
     @DeleteMapping("/serviceVod/video/delete/{videoId}")
     public CommonResult deleteByVideoId(@PathVariable("videoId") String videoId);
