@@ -29,7 +29,9 @@ com\phoenixhell\serviceEdu\entity\EduVideo.class
 com\phoenixhell\serviceEdu\controller\EduChapterController.class
 com\phoenixhell\serviceEdu\service\impl\EduCourseDescriptionServiceImpl.class
 com\phoenixhell\serviceEdu\entity\EduSubjectExcel.class
+com\phoenixhell\serviceEdu\Config\EduConfig$LogConfig.class
 com\phoenixhell\serviceEdu\entity\EduCourseDescription.class
+com\phoenixhell\serviceEdu\vodClient\VodService.class
 com\phoenixhell\serviceEdu\service\impl\EduChapterServiceImpl.class
 com\phoenixhell\serviceEdu\service\EduVideoService.class
 com\phoenixhell\serviceEdu\entity\EduSubject.class

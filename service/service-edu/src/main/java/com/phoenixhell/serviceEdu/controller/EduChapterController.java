@@ -8,6 +8,7 @@ import com.phoenixhell.serviceEdu.entity.EduChapter;
 import com.phoenixhell.serviceEdu.entity.EduVideo;
 import com.phoenixhell.serviceEdu.service.EduChapterService;
 import com.phoenixhell.serviceEdu.service.EduVideoService;
+import com.phoenixhell.servicebase.exceptionhandler.MyException;
 import com.phoenixhell.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -79,7 +80,7 @@ public class EduChapterController {
             if (b) {
                 return CommonResult.ok().emptyData().data("删除结果", "删除成功");
             } else {
-                return CommonResult.ok().emptyData().data("删除结果", "删除失败");
+                throw new MyException(20001, "删除失败");
             }
         }else{
             return CommonResult.error("有子节点不能删除").emptyData();

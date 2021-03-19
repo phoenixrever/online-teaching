@@ -5,11 +5,19 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.conditions.query.QueryChainWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.phoenixhell.serviceEdu.entity.EduChapter;
 import com.phoenixhell.serviceEdu.entity.EduCourse;
+import com.phoenixhell.serviceEdu.entity.EduVideo;
 import com.phoenixhell.serviceEdu.entity.vo.CompleteCourseInfo;
 import com.phoenixhell.serviceEdu.entity.vo.Course;
+import com.phoenixhell.serviceEdu.service.EduChapterService;
+import com.phoenixhell.serviceEdu.service.EduCourseDescriptionService;
 import com.phoenixhell.serviceEdu.service.EduCourseService;
+import com.phoenixhell.serviceEdu.service.EduVideoService;
+import com.phoenixhell.serviceEdu.vodClient.VodService;
+import com.phoenixhell.servicebase.exceptionhandler.MyException;
 import com.phoenixhell.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
@@ -17,6 +25,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -33,7 +42,14 @@ import java.util.Map;
 public class EduCourseController {
     @Autowired
     private EduCourseService eduCourseService;
-
+    @Autowired
+    private EduChapterService eduChapterService;
+    @Autowired
+    private EduCourseDescriptionService eduCourseDescriptionService;
+    @Autowired
+    private EduVideoService eduVideoService;
+    @Autowired
+    private VodService vodService;
     @PostMapping("add")
     public CommonResult addCourse(@RequestBody Course course) {
         String id = eduCourseService.saveCourse(course);
@@ -145,8 +161,25 @@ public class EduCourseController {
     }
     @DeleteMapping("/delete/{id}")
     public CommonResult deleteCourse(@PathVariable("id")String id){
-        eduCourseService.deleteCourse(id);
-        return CommonResult.ok().emptyData();
+        List<EduVideo> videos = eduVideoService.query().eq("course_id", id).list();
+        videos.forEach(v->{
+            if(StringUtils.isEmpty(v.getVideoSourceId())){
+                vodService.deleteByVideoId(v.getVideoSourceId());
+            }
+            boolean removeVideo = eduVideoService.removeById(v.getId());
+            if(!removeVideo){
+                throw new MyException(20001,"删除小结失败事务回滚");
+            }
+        });
+
+        boolean removeChapter = eduChapterService.remove(new QueryWrapper<EduChapter>().eq("course_id", id));
+        boolean removeDescription =eduCourseDescriptionService.removeById(id);
+        boolean removeEduCourse = eduCourseService.removeById(id);
+        if(removeChapter && removeDescription && removeEduCourse){
+            return CommonResult.ok().emptyData();
+        }else{
+            throw new MyException(20001,"删除章节,描述,课程有失败事务回滚");
+        }
     }
 }
 

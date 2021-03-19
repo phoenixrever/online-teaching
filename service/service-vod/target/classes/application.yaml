@@ -5,13 +5,17 @@ server:
       file-date-format:
 spring:
   application:
-    name: service-vod
+    name: server-vod
   servlet:
     multipart:
       #设置总上传单个文件大小 默认1M
       max-file-size: 1024MB
       #设置总上传数据文件大小默认10M
       max-request-size: 1024MB
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
 aliyun:
   vod:
     #accessKeyId: LTAI4GBn6ndauEMrJEngWjWK
