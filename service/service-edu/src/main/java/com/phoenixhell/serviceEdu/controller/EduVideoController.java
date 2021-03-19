@@ -39,6 +39,7 @@ public class EduVideoController {
     @Transactional
     public CommonResult deleteVideoById(@PathVariable("id") String id) {
         EduVideo eduVideo = eduVideoService.getById(id);
+//        EduVideo eduVideo = eduVideoService.query().eq("id", id).select("video_source_id").one();
         String videoSourceId = eduVideo.getVideoSourceId();
         boolean b = eduVideoService.removeById(id);
         CommonResult commonResult = null;
