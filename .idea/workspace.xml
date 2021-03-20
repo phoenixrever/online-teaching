@@ -5,7 +5,34 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="386e7ef7-476a-454e-860b-396192b5d42d" name="Default Changelist" comment="2021-03-19 17:53" />
+    <list default="true" id="386e7ef7-476a-454e-860b-396192b5d42d" name="Default Changelist" comment="2021-03-19 17:53">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_afterburner_2_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_javanica_1_5_18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_metrics_event_stream_1_5_18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_serialization_1_5_18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava_reactive_streams_1_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_hystrix_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_hystrix_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/service-base/target/classes/com/phoenixhell/servicebase/config/MybatisPage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-edu/src/main/java/com/phoenixhell/serviceEdu/controller/EduController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-edu/target/classes/META-INF/service-edu.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-edu/target/classes/com/phoenixhell/serviceEdu/Config/FeignConfig$LogConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-edu/target/classes/com/phoenixhell/serviceEdu/Config/FeignConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-edu/target/classes/com/phoenixhell/serviceEdu/controller/EduController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_9.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-cms/src/main/java/com/phoenixhell/serviceCms/controller/BannerFrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-cms/src/main/java/com/phoenixhell/serviceCms/controller/BannerFrontController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-edu/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-edu/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-edu/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-edu/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-edu/target/classes/com/phoenixhell/serviceEdu/Config/EduConfig$LogConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-edu/target/classes/com/phoenixhell/serviceEdu/Config/EduConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-edu/target/classes/com/phoenixhell/serviceEdu/controller/EduVideoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-edu/target/classes/com/phoenixhell/serviceEdu/controller/EduVideoController.class" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +42,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -24,13 +52,18 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$PROJECT_DIR$/../maven/apache-maven-3.3.9" />
-        <option name="userSettingsFile" value="E:\maven\apache-maven-3.3.9\conf\settings.xml" />
+        <option name="localRepository" value="N:\apache-maven-3.6.3" />
+        <option name="mavenHome" value="N:/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="N:\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
-  </component>
-  <component name="MavenRunner">
-    <option name="delegateBuildToMaven" value="true" />
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="jdkForImporter" value="1.8" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1pyGNEec99IfrSrhdtLjMZH00PZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -46,6 +79,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -54,12 +88,24 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15332031" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="Spring Boot.ServiceVod8003">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ServiceEdu8001">
     <configuration name="ServiceEdu8001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="service-edu" />
       <extension name="coverage">
@@ -86,10 +132,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="serviceCms8004" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="service-cms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.phoenixhell.serviceCms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.phoenixhell.serviceCms.serviceCms8004" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ServiceVod8003" />
         <item itemvalue="Spring Boot.ServiceEdu8001" />
+        <item itemvalue="Spring Boot.ServiceVod8003" />
+        <item itemvalue="Spring Boot.serviceCms8004" />
       </list>
     </recent_temporary>
   </component>
@@ -112,24 +172,27 @@
       <updated>1616147884389</updated>
       <workItem from="1616147954648" duration="213000" />
       <workItem from="1616148199913" duration="77000" />
+      <workItem from="1616252522239" duration="274000" />
+      <workItem from="1616252818310" duration="890000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2021-03-19 17:53" />
