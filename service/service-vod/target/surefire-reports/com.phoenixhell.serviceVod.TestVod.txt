@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.phoenixhell.serviceVod.TestVod
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.684 s - in com.phoenixhell.serviceVod.TestVod
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.696 s - in com.phoenixhell.serviceVod.TestVod

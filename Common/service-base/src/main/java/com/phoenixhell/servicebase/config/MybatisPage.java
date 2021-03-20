@@ -1,15 +1,15 @@
-package com.phoenixhell.serviceEdu.Config;
+package com.phoenixhell.servicebase.config;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.autoconfigure.ConfigurationCustomizer;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
-import feign.Logger;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class EduConfig {
+public class MybatisPage {
     /**
      * 新的分页插件,一缓和二缓遵循mybatis的规则,需要设置
      * MybatisConfiguration#useDeprecatedExecutor = false
@@ -25,14 +25,6 @@ public class EduConfig {
     @Bean
     public ConfigurationCustomizer configurationCustomizer() {
         return configuration -> configuration.setUseDeprecatedExecutor(false);
-    }
-    //开启feign日志
-    @Configuration
-    public class LogConfig {
-        @Bean
-        Logger.Level feignLoggerLevel(){
-            return Logger.Level.FULL;
-        }
     }
 }
 

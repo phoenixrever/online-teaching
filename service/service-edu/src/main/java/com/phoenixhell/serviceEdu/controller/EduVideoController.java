@@ -32,6 +32,7 @@ public class EduVideoController {
 
     @Autowired
     private EduChapterService eduChapterService;
+
     @Autowired
     private VodService vodService;
 
@@ -39,18 +40,21 @@ public class EduVideoController {
     @Transactional
     public CommonResult deleteVideoById(@PathVariable("id") String id) {
         EduVideo eduVideo = eduVideoService.getById(id);
+//        EduVideo eduVideo = eduVideoService.query().eq("id", id).select("video_source_id").one();
         String videoSourceId = eduVideo.getVideoSourceId();
         boolean b = eduVideoService.removeById(id);
-        CommonResult commonResult = null;
         if (videoSourceId != null) {
-            commonResult = vodService.deleteByVideoId(videoSourceId);
+            CommonResult commonResult = vodService.deleteByVideoId(videoSourceId);
             System.out.println(commonResult);
+            if (commonResult.getSuccess() == false){
+                // 这里直接抛出异常促发事务回滚就好了熔断器异常处理方法其实没必要设置
+                throw new MyException(20001,"hystrix callback");
+            }
         }
-        if (b && commonResult.getSuccess() == true) {
-            return CommonResult.ok().emptyData().data("删除结果", "删除成功");
-        } else {
+        if (!b) {
             throw new MyException(20001, "事务错误");
         }
+        return CommonResult.ok().emptyData().data("删除结果", "删除成功");
     }
 
     @PutMapping("/edit")

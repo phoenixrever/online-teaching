@@ -1,11 +1,8 @@
 package com.phoenixhell.serviceEdu.controller;
 
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.conditions.query.QueryChainWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.phoenixhell.serviceEdu.entity.EduChapter;
 import com.phoenixhell.serviceEdu.entity.EduCourse;
@@ -23,7 +20,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
-import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -162,6 +158,7 @@ public class EduCourseController {
     @DeleteMapping("/delete/{id}")
     public CommonResult deleteCourse(@PathVariable("id")String id){
         List<EduVideo> videos = eduVideoService.query().eq("course_id", id).list();
+       //删除方法1
         videos.forEach(v->{
             if(StringUtils.isEmpty(v.getVideoSourceId())){
                 vodService.deleteByVideoId(v.getVideoSourceId());
@@ -171,6 +168,22 @@ public class EduCourseController {
                 throw new MyException(20001,"删除小结失败事务回滚");
             }
         });
+       //删除方法二
+//        org.apache.commons.lang.StringUtils.join(list.toArray(), ",")
+//        StringBuffer sb =new StringBuffer();
+//        List<String> list = new ArrayList<>();
+//        videos.forEach(v->{
+//            sb.append(v.getVideoSourceId() + ",");
+//            list.add(v.getId());
+//        });
+//        String deleteVideoIdStr=sb.substring(0,sb.length()-1);
+//        if(StringUtils.isEmpty(deleteVideoIdStr)){
+//            vodService.deleteByVideoId(deleteVideoIdStr);
+//        }
+//        boolean removeByIds = eduVideoService.removeByIds(list);
+//        if(!removeByIds){
+//            throw new MyException(20001,"删除小结失败事务回滚");
+//        }
 
         boolean removeChapter = eduChapterService.remove(new QueryWrapper<EduChapter>().eq("course_id", id));
         boolean removeDescription =eduCourseDescriptionService.removeById(id);
