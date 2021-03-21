@@ -1,5 +1,6 @@
 package com.phoenixhell.serviceCms.controller;
 
+import com.phoenixhell.serviceCms.service.FeignService.EduCourseFeignService;
 import com.phoenixhell.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -15,4 +16,12 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin
 @RequestMapping("/serviceCms/bannerFront")
 public class BannerFrontController {
+
+    @Autowired
+    private EduCourseFeignService eduCourseFeignService;
+
+    @GetMapping("/course/sortViewDesc")
+    public CommonResult teacherSortByViewDesc(){
+        return  eduCourseFeignService.teacherSortByViewDesc();
+    }
 }

@@ -5,3 +5,4 @@ com\phoenixhell\serviceCms\service\impl\CrmBannerServiceImpl.class
 com\phoenixhell\serviceCms\controller\BannerFrontController.class
 com\phoenixhell\serviceCms\entity\CrmBanner.class
 com\phoenixhell\serviceCms\serviceCms8004.class
+com\phoenixhell\serviceCms\service\FeignService\EduCourseFeignService.class

@@ -1,4 +1,4 @@
-package com.phoenixhell.serviceEdu.config;
+package com.phoenixhell.servicebase.config;
 
 import feign.Logger;
 import org.springframework.context.annotation.Bean;
