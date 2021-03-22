@@ -3,6 +3,7 @@ package com.phoenixhell.utils;
 import io.swagger.annotations .ApiModelProperty;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -12,7 +13,7 @@ import java.util.Map;
  */
 //统一返回结果
 @Data
-public class CommonResult {
+public class CommonResult{
     private CommonResult() {
     }
 

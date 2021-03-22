@@ -5,6 +5,7 @@ import com.phoenixhell.serviceCms.mapper.CrmBannerMapper;
 import com.phoenixhell.serviceCms.service.CrmBannerService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
+import springfox.documentation.annotations.Cacheable;
 
 /**
  * <p>
@@ -14,6 +15,7 @@ import org.springframework.stereotype.Service;
  * @author phoenixhell
  * @since 2021-03-20
  */
+
 @Service
 public class CrmBannerServiceImpl extends ServiceImpl<CrmBannerMapper, CrmBanner> implements CrmBannerService {
 

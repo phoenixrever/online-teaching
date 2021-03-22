@@ -8,6 +8,9 @@ import com.phoenixhell.serviceCms.service.CrmBannerService;
 import com.phoenixhell.servicebase.exceptionhandler.MyException;
 import com.phoenixhell.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -33,7 +36,12 @@ public class BannerAdminController {
         CrmBanner banner = crmBannerService.getById(id);
         return CommonResult.ok().emptyData().data("banner",banner);
     }
+
     @GetMapping("/list")
+    //包不要导错
+//    @Cacheable(value = "banner",key = "'list'")
+    //清空value指定名字的缓存
+    @CacheEvict(value = "homePage", allEntries=true)
     public CommonResult list(){
         List<CrmBanner> list = crmBannerService.list();
         return CommonResult.ok().emptyData().data("list",list);
