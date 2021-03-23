@@ -1,0 +1,8 @@
+com\phoenixhell\serviceUcenter\service\impl\UcenterMemberServiceImpl.class
+com\phoenixhell\serviceUcenter\entity\vo\RegisterVo.class
+com\phoenixhell\serviceUcenter\service\UcenterMemberService.class
+com\phoenixhell\serviceUcenter\ServiceUcenter8006.class
+com\phoenixhell\serviceUcenter\mapper\UcenterMemberMapper.class
+com\phoenixhell\serviceUcenter\entity\UcenterMember.class
+com\phoenixhell\serviceUcenter\controller\UcenterMemberController.class
+com\phoenixhell\serviceUcenter\entity\vo\LoginVO.class

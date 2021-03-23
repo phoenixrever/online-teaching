@@ -1,3 +1,6 @@
+com\phoenixhell\utils\JwtUtils.class
+com\phoenixhell\utils\RandomUtil.class
 com\phoenixhell\utils\StatusCode.class
 com\phoenixhell\utils\ExceptionUtil.class
+com\phoenixhell\utils\MD5.class
 com\phoenixhell\utils\CommonResult.class
