@@ -5,6 +5,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.phoenixhell.serviceUcenter.entity.vo.LoginVO;
 import com.phoenixhell.serviceUcenter.entity.vo.RegisterVo;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * <p>
  * 会员表 服务类
@@ -18,4 +20,6 @@ public interface UcenterMemberService extends IService<UcenterMember> {
     String login(LoginVO loginVO);
 
     String register(RegisterVo registerVo);
+
+    UcenterMember getUserInfoByToken(HttpServletRequest request);
 }

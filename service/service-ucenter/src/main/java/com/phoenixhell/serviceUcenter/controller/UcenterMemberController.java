@@ -9,6 +9,8 @@ import com.phoenixhell.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * <p>
  * 会员表 前端控制器
@@ -34,6 +36,11 @@ public class UcenterMemberController {
     public CommonResult register(@RequestBody RegisterVo registerVo){
         String token=ucenterMemberService.register(registerVo);
         return CommonResult.ok().emptyData().data("token",token);
+    }
+    @GetMapping("/info")
+    public CommonResult getUserInfoByToken(HttpServletRequest request){
+        UcenterMember user =ucenterMemberService.getUserInfoByToken(request);
+        return CommonResult.ok().emptyData().data("user",user);
     }
 }
 

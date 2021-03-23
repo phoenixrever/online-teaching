@@ -13,7 +13,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-import java.util.List;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * <p>
@@ -86,6 +86,17 @@ public class UcenterMemberServiceImpl extends ServiceImpl<UcenterMemberMapper, U
         }
         String token = JwtUtils.getJwtToken(ucenterMember.getId(),ucenterMember.getNickname());
         return token;
+    }
+
+    @Override
+    public UcenterMember getUserInfoByToken(HttpServletRequest request) {
+        String id = JwtUtils.getMemberIdByJwtToken(request);
+        UcenterMember member = this.getById(id);
+        if(member==null){
+            throw new MyException(20001,"无此用户");
+        }
+        member.setPassword(null);
+        return  member;
     }
 
 }
