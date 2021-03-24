@@ -95,7 +95,7 @@ public class UcenterMemberServiceImpl extends ServiceImpl<UcenterMemberMapper, U
         if(member==null){
             throw new MyException(20001,"无此用户");
         }
-        member.setPassword(null);
+//        member.setPassword("");
         return  member;
     }
 

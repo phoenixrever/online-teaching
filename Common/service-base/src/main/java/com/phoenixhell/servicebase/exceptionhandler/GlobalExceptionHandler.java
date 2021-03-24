@@ -29,6 +29,6 @@ public class GlobalExceptionHandler {
     @ResponseBody
     public CommonResult myException(MyException e){
         log.error(ExceptionUtil.getMessage(e));
-        return CommonResult.error().emptyData().data("自定义异常", Arrays.asList(e.getCode(), e.getMsg()));
+        return CommonResult.error().emptyData().data("customMessage", Arrays.asList(e.getCode(), e.getMsg()));
     }
 }
