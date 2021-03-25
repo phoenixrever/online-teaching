@@ -1,4 +1,4 @@
-package com.phoenixhell.serviceEdu.controller;
+package com.phoenixhell.serviceEdu.controller.front;
 
 import com.phoenixhell.serviceEdu.entity.EduCourse;
 import com.phoenixhell.serviceEdu.entity.EduTeacher;
@@ -43,6 +43,7 @@ public class EduController {
 //    根据方法对其返回结果进行缓存，下次请求时，如果缓存存在，
 //    则直接读取缓存数据返回；如果缓存不存在，则执行方法，并把返回的结果存入缓存中。一般用在查询方法上。
     @GetMapping("course/sortViewDesc")
+//    @Cacheable(value = "banner",key = "'teacherSortByViewDesc'")
     public CommonResult teacherSortByViewDesc(){
         List<EduCourse> courses = eduCourseService.query().orderByDesc("view_count").last("limit 8").list();
         List<EduTeacher> teachers = eduTeacherService.query().orderByDesc("level").orderByAsc("name").last("limit 1").list();

@@ -39,9 +39,9 @@ public class BannerAdminController {
 
     @GetMapping("/list")
     //包不要导错
-//    @Cacheable(value = "banner",key = "'list'")
+    @Cacheable(value = "banner",key = "'list'")
     //清空value指定名字的缓存
-    @CacheEvict(value = "homePage", allEntries=true)
+//    @CacheEvict(value = "homePage", allEntries=true)
     public CommonResult list(){
         List<CrmBanner> list = crmBannerService.list();
         return CommonResult.ok().emptyData().data("list",list);
