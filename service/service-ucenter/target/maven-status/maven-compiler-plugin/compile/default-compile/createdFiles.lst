@@ -1,8 +1,14 @@
+com\phoenixhell\serviceUcenter\entity\WxProperties.class
 com\phoenixhell\serviceUcenter\service\impl\UcenterMemberServiceImpl.class
-com\phoenixhell\serviceUcenter\entity\vo\RegisterVo.class
-com\phoenixhell\serviceUcenter\service\UcenterMemberService.class
-com\phoenixhell\serviceUcenter\ServiceUcenter8006.class
+com\phoenixhell\serviceUcenter\utils\HttpClientUtils$2.class
+com\phoenixhell\serviceUcenter\controller\WxController$1.class
+com\phoenixhell\serviceUcenter\utils\HttpClientUtils$1.class
 com\phoenixhell\serviceUcenter\mapper\UcenterMemberMapper.class
 com\phoenixhell\serviceUcenter\entity\UcenterMember.class
 com\phoenixhell\serviceUcenter\controller\UcenterMemberController.class
 com\phoenixhell\serviceUcenter\entity\vo\LoginVO.class
+com\phoenixhell\serviceUcenter\entity\vo\RegisterVo.class
+com\phoenixhell\serviceUcenter\utils\HttpClientUtils.class
+com\phoenixhell\serviceUcenter\controller\WxController.class
+com\phoenixhell\serviceUcenter\service\UcenterMemberService.class
+com\phoenixhell\serviceUcenter\ServiceUcenter8006.class
