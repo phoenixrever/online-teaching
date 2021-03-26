@@ -1,5 +1,6 @@
 package com.phoenixhell.serviceVod.service;
 
+import com.aliyuncs.DefaultAcsClient;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;

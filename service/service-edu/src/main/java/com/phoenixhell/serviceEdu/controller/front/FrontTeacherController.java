@@ -6,9 +6,11 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.phoenixhell.serviceEdu.entity.EduChapter;
 import com.phoenixhell.serviceEdu.entity.EduCourse;
 import com.phoenixhell.serviceEdu.entity.EduTeacher;
+import com.phoenixhell.serviceEdu.entity.OneSubject;
 import com.phoenixhell.serviceEdu.entity.vo.CompleteCourseInfo;
 import com.phoenixhell.serviceEdu.service.EduChapterService;
 import com.phoenixhell.serviceEdu.service.EduCourseService;
+import com.phoenixhell.serviceEdu.service.EduSubjectService;
 import com.phoenixhell.serviceEdu.service.EduTeacherService;
 import com.phoenixhell.utils.CommonResult;
 import io.swagger.annotations.Api;
@@ -32,6 +34,8 @@ public class FrontTeacherController {
     private EduCourseService eduCourseService;
     @Autowired
     private EduChapterService eduChapterService;
+    @Autowired
+    private EduSubjectService eduSubjectService;
     @ApiOperation(value = "物理分页")
     @GetMapping("/page/{currentPage}/{limit}")
     public CommonResult page(@PathVariable("currentPage") Integer page, @PathVariable("limit") Integer limit) {
@@ -63,18 +67,13 @@ public class FrontTeacherController {
     @PostMapping("/search/{currentPage}")
     public CommonResult getCoursePagination(@PathVariable("currentPage") Long currentPage,
                                             @RequestBody() CompleteCourseInfo completeCourseInfo) {
+        List<OneSubject> allSubject = eduSubjectService.getAllSubject();
         QueryWrapper<CompleteCourseInfo> wrapper = new QueryWrapper<>();
-        wrapper.gt(!StringUtils.isEmpty(completeCourseInfo.getGtPrice()), "ec.price", completeCourseInfo.getGtPrice());
-        wrapper.lt(!StringUtils.isEmpty(completeCourseInfo.getLtPrice()), "ec.price", completeCourseInfo.getLtPrice());
         Long limit = StringUtils.isEmpty(completeCourseInfo.getLimit())?10L:completeCourseInfo.getLimit();
-        wrapper.like(!StringUtils.isEmpty(completeCourseInfo.getTitle()), "ec.title", completeCourseInfo.getTitle());
-        wrapper.like(!StringUtils.isEmpty(completeCourseInfo.getSubjectLevelOne()), "es.title", completeCourseInfo.getSubjectLevelOne());
+        wrapper.eq(!StringUtils.isEmpty(completeCourseInfo.getSubjectLevelOne()), "es.title", completeCourseInfo.getSubjectLevelOne());
         wrapper.like(!StringUtils.isEmpty(completeCourseInfo.getSubjectLevelTwo()), "es2.title", completeCourseInfo.getSubjectLevelTwo());
-        wrapper.like(!StringUtils.isEmpty(completeCourseInfo.getTeacherName()), "et.name", completeCourseInfo.getTeacherName());
-        wrapper.eq(!StringUtils.isEmpty(completeCourseInfo.getStatus()), "ec.status",completeCourseInfo.getStatus());
-        wrapper.orderByDesc(!StringUtils.isEmpty(completeCourseInfo.getGmtModified()),"ec.gmt_modified");
-        wrapper.orderByDesc(!StringUtils.isEmpty(completeCourseInfo.getPrice()), "ec.price");
-        wrapper.orderByDesc(!StringUtils.isEmpty(completeCourseInfo.getViewCount()), "view_count");
+
+
         Page<CompleteCourseInfo> completeCoursePage = eduCourseService.getCompleteCoursePage(new Page<>(currentPage, limit), wrapper);
         Map<String, Object> map = new HashMap<>();
         map.put("total", completeCoursePage.getTotal());
@@ -83,5 +82,6 @@ public class FrontTeacherController {
         map.put("totalPages", completeCoursePage.getPages());
         map.put("hasPrevious", completeCoursePage.hasPrevious());
         map.put("hasNext", completeCoursePage.hasNext());
+        map.put("allSubject", allSubject);
         return CommonResult.ok().emptyData().data(map); }
 }
