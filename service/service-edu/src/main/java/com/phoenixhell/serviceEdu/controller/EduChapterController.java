@@ -36,7 +36,7 @@ public class EduChapterController {
     private EduVideoService eduVideoService;
 
     @GetMapping("/get/{id}")
-    public CommonResult getAllChapter(@PathVariable("id") String id) {
+    public CommonResult getAllChapterByCourseId(@PathVariable("id") String id) {
         List<EduChapter> chapterList = eduChapterService.getChapterById(id);
         return CommonResult.ok().emptyData().data("chapterList", chapterList);
     }

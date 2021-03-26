@@ -46,7 +46,7 @@ public class EduCourseController {
     private EduVideoService eduVideoService;
     @Autowired
     private VodService vodService;
-    @PostMapping("add")
+    @PostMapping("/add")
     public CommonResult addCourse(@RequestBody Course course) {
         String id = eduCourseService.saveCourse(course);
         if (id != null) {
@@ -56,7 +56,7 @@ public class EduCourseController {
         }
     }
 
-    @GetMapping("get/{id}")
+    @GetMapping("/get/{id}")
     public CommonResult addCourse(@PathVariable("id") String id) {
         Course course = eduCourseService.getCourseById(id);
         if (course != null) {
@@ -125,7 +125,7 @@ public class EduCourseController {
         wrapper.like(!StringUtils.isEmpty(completeCourseInfo.getTeacherName()), "et.name", completeCourseInfo.getTeacherName());
         wrapper.eq(!StringUtils.isEmpty(completeCourseInfo.getStatus()), "ec.status",completeCourseInfo.getStatus());
         wrapper.orderByDesc("ec.gmt_create");
-        IPage<CompleteCourseInfo> completeCoursePage = eduCourseService.getCompleteCoursePage(new Page<>(currentPage, limit), wrapper);
+        Page<CompleteCourseInfo> completeCoursePage = eduCourseService.getCompleteCoursePage(new Page<>(currentPage, limit), wrapper);
         Map<String, Object> map = new HashMap<>();
         map.put("total", completeCoursePage.getTotal());
         map.put("completeCourseInfo", completeCoursePage.getRecords());

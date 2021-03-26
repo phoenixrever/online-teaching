@@ -1,3 +1,4 @@
+E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\controller\front\EduController.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\entity\vo\Course.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\service\impl\EduCourseServiceImpl.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\listener\EasyExcelReadListener.java
@@ -25,6 +26,7 @@ E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\controller\EduSubjectController.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\mapper\EduCourseMapper.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\controller\EduTeacherController.java
+E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\controller\front\FrontTeacherController.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\entity\EduTeacher.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\entity\EduSubjectExcel.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\controller\EduChapterController.java
@@ -33,7 +35,6 @@ E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\entity\TwoSubject.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\entity\vo\TeacherQuery.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\mapper\EduSubjectMapper.java
-E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\controller\EduController.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\service\EduTeacherService.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\entity\EduCourse.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\service\EduChapterService.java

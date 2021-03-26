@@ -109,11 +109,6 @@ public class EduTeacherController {
     @ApiOperation(value = "根据ID 查询讲师")
     @GetMapping("/getTeacher/{id}")
     public CommonResult getTeacher(@PathVariable("id") String id) {
-        try {
-            int age= 10/0;
-        } catch (Exception e) {
-            throw new MyException(9527,"自定义by zero 异常");
-        }
         EduTeacher eduTeacher = eduTeacherService.getById(id);
         return CommonResult.ok().emptyData().data("teacher", eduTeacher);
     }

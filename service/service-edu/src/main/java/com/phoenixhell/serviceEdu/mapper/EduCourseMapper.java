@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Constants;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.phoenixhell.serviceEdu.entity.EduCourse;
 import com.phoenixhell.serviceEdu.entity.vo.CompleteCourseInfo;
 import org.apache.ibatis.annotations.Param;
@@ -20,5 +21,5 @@ import java.util.List;
  */
 public interface EduCourseMapper extends BaseMapper<EduCourse> {
     CompleteCourseInfo getCompleteCourseInfoById(String id);
-    IPage<CompleteCourseInfo> getCompleteCoursePage(IPage<CompleteCourseInfo> page, @Param(Constants.WRAPPER) Wrapper<CompleteCourseInfo> queryWrapper);
+    Page<CompleteCourseInfo> getCompleteCoursePage(IPage<CompleteCourseInfo> page, @Param(Constants.WRAPPER) Wrapper<CompleteCourseInfo> queryWrapper);
 }

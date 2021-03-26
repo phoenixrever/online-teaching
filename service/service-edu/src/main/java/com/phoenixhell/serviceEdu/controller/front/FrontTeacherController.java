@@ -1,15 +1,24 @@
 package com.phoenixhell.serviceEdu.controller.front;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.phoenixhell.serviceEdu.entity.EduChapter;
+import com.phoenixhell.serviceEdu.entity.EduCourse;
 import com.phoenixhell.serviceEdu.entity.EduTeacher;
+import com.phoenixhell.serviceEdu.entity.vo.CompleteCourseInfo;
+import com.phoenixhell.serviceEdu.service.EduChapterService;
+import com.phoenixhell.serviceEdu.service.EduCourseService;
 import com.phoenixhell.serviceEdu.service.EduTeacherService;
 import com.phoenixhell.utils.CommonResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Api(tags = "前台讲师分页")
@@ -19,6 +28,10 @@ import java.util.Map;
 public class FrontTeacherController {
     @Autowired
     private EduTeacherService eduTeacherService;
+    @Autowired
+    private EduCourseService eduCourseService;
+    @Autowired
+    private EduChapterService eduChapterService;
     @ApiOperation(value = "物理分页")
     @GetMapping("/page/{currentPage}/{limit}")
     public CommonResult page(@PathVariable("currentPage") Integer page, @PathVariable("limit") Integer limit) {
@@ -33,4 +46,42 @@ public class FrontTeacherController {
         return CommonResult.ok().emptyData().data(map);
     }
 
+    @GetMapping("/course/{id}")
+    public CommonResult getCourseByTeacherId(@PathVariable("id")String id){
+        EduTeacher eduTeacher = eduTeacherService.getById(id);
+        List<EduCourse> eduCourses = eduCourseService.query().eq("teacher_id", id).list();
+        return CommonResult.ok().emptyData().data("teacher",eduTeacher).data("course",eduCourses);
+    }
+
+    @GetMapping("/completeCourse/{id}")
+    public CommonResult publish(@PathVariable("id") String id) {
+        CompleteCourseInfo completeCourseInfo = eduCourseService.getCompleteCourseInfoById(id);
+        List<EduChapter> chapter = eduChapterService.getChapterById(id);
+        return CommonResult.ok().emptyData().data("completeCourseInfo", completeCourseInfo).data("chapterList",chapter);
+    }
+
+    @PostMapping("/search/{currentPage}")
+    public CommonResult getCoursePagination(@PathVariable("currentPage") Long currentPage,
+                                            @RequestBody() CompleteCourseInfo completeCourseInfo) {
+        QueryWrapper<CompleteCourseInfo> wrapper = new QueryWrapper<>();
+        wrapper.gt(!StringUtils.isEmpty(completeCourseInfo.getGtPrice()), "ec.price", completeCourseInfo.getGtPrice());
+        wrapper.lt(!StringUtils.isEmpty(completeCourseInfo.getLtPrice()), "ec.price", completeCourseInfo.getLtPrice());
+        Long limit = StringUtils.isEmpty(completeCourseInfo.getLimit())?10L:completeCourseInfo.getLimit();
+        wrapper.like(!StringUtils.isEmpty(completeCourseInfo.getTitle()), "ec.title", completeCourseInfo.getTitle());
+        wrapper.like(!StringUtils.isEmpty(completeCourseInfo.getSubjectLevelOne()), "es.title", completeCourseInfo.getSubjectLevelOne());
+        wrapper.like(!StringUtils.isEmpty(completeCourseInfo.getSubjectLevelTwo()), "es2.title", completeCourseInfo.getSubjectLevelTwo());
+        wrapper.like(!StringUtils.isEmpty(completeCourseInfo.getTeacherName()), "et.name", completeCourseInfo.getTeacherName());
+        wrapper.eq(!StringUtils.isEmpty(completeCourseInfo.getStatus()), "ec.status",completeCourseInfo.getStatus());
+        wrapper.orderByDesc(!StringUtils.isEmpty(completeCourseInfo.getGmtModified()),"ec.gmt_modified");
+        wrapper.orderByDesc(!StringUtils.isEmpty(completeCourseInfo.getPrice()), "ec.price");
+        wrapper.orderByDesc(!StringUtils.isEmpty(completeCourseInfo.getViewCount()), "view_count");
+        Page<CompleteCourseInfo> completeCoursePage = eduCourseService.getCompleteCoursePage(new Page<>(currentPage, limit), wrapper);
+        Map<String, Object> map = new HashMap<>();
+        map.put("total", completeCoursePage.getTotal());
+        map.put("completeCourseInfo", completeCoursePage.getRecords());
+        map.put("current", completeCoursePage.getCurrent());
+        map.put("totalPages", completeCoursePage.getPages());
+        map.put("hasPrevious", completeCoursePage.hasPrevious());
+        map.put("hasNext", completeCoursePage.hasNext());
+        return CommonResult.ok().emptyData().data(map); }
 }

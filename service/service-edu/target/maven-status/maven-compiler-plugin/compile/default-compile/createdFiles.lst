@@ -14,7 +14,6 @@ com\phoenixhell\serviceEdu\service\EduTeacherService.class
 com\phoenixhell\serviceEdu\controller\EduLoginController.class
 com\phoenixhell\serviceEdu\controller\EduVideoController.class
 com\phoenixhell\serviceEdu\mapper\EduSubjectMapper.class
-com\phoenixhell\serviceEdu\controller\EduController.class
 com\phoenixhell\serviceEdu\entity\EduCourse.class
 com\phoenixhell\serviceEdu\service\impl\EduVideoServiceImpl.class
 com\phoenixhell\serviceEdu\mapper\EduCourseDescriptionMapper.class
@@ -38,6 +37,7 @@ com\phoenixhell\serviceEdu\service\EduVideoService.class
 com\phoenixhell\serviceEdu\entity\EduSubject.class
 com\phoenixhell\serviceEdu\entity\EduChapter.class
 com\phoenixhell\serviceEdu\controller\EduTeacherController.class
+com\phoenixhell\serviceEdu\controller\front\FrontTeacherController.class
 com\phoenixhell\serviceEdu\controller\EduChapterController$1.class
 com\phoenixhell\serviceEdu\service\EduChapterService.class
 com\phoenixhell\serviceEdu\service\impl\EduCourseServiceImpl.class

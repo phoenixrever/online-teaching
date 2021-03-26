@@ -3,6 +3,7 @@ package com.phoenixhell.serviceEdu.service.impl;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.phoenixhell.serviceEdu.entity.EduCourse;
 import com.phoenixhell.serviceEdu.entity.EduCourseDescription;
@@ -92,7 +93,7 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
     }
 
     @Override
-    public IPage<CompleteCourseInfo> getCompleteCoursePage(IPage<CompleteCourseInfo> page, Wrapper<CompleteCourseInfo> queryWrapper) {
+    public Page<CompleteCourseInfo> getCompleteCoursePage(IPage<CompleteCourseInfo> page, Wrapper<CompleteCourseInfo> queryWrapper) {
         return eduCourseMapper.getCompleteCoursePage(page, queryWrapper);
     }
 

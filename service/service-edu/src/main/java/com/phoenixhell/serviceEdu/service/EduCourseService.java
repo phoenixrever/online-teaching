@@ -2,6 +2,7 @@ package com.phoenixhell.serviceEdu.service;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.phoenixhell.serviceEdu.entity.EduCourse;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.phoenixhell.serviceEdu.entity.vo.CompleteCourseInfo;
@@ -23,6 +24,6 @@ public interface EduCourseService extends IService<EduCourse> {
     Course getCourseById(String id);
     Boolean updateCourseById(Course course);
     CompleteCourseInfo getCompleteCourseInfoById(String id);
-    IPage<CompleteCourseInfo> getCompleteCoursePage(IPage<CompleteCourseInfo> page, Wrapper<CompleteCourseInfo> queryWrapper);
+    Page<CompleteCourseInfo> getCompleteCoursePage(IPage<CompleteCourseInfo> page, Wrapper<CompleteCourseInfo> queryWrapper);
     Boolean deleteCourse(String id);
 }
