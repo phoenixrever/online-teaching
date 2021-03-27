@@ -42,6 +42,8 @@ public class Vod {
     public static GetVideoPlayAuthResponse getVideoPlayAuth(DefaultAcsClient client, String videoId) throws Exception {
         GetVideoPlayAuthRequest request = new GetVideoPlayAuthRequest();
         request.setVideoId(videoId);
+        //播放凭证有过期时间，默认值：100秒 。取值范围：100~3000。
+        request.setAuthInfoTimeout(200L);
         return client.getAcsResponse(request);
     }
 

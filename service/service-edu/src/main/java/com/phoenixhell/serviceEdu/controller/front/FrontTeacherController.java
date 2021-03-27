@@ -72,7 +72,9 @@ public class FrontTeacherController {
         Long limit = StringUtils.isEmpty(completeCourseInfo.getLimit())?10L:completeCourseInfo.getLimit();
         wrapper.eq(!StringUtils.isEmpty(completeCourseInfo.getSubjectLevelOne()), "es.title", completeCourseInfo.getSubjectLevelOne());
         wrapper.like(!StringUtils.isEmpty(completeCourseInfo.getSubjectLevelTwo()), "es2.title", completeCourseInfo.getSubjectLevelTwo());
-
+        wrapper.orderByDesc(!StringUtils.isEmpty(completeCourseInfo.getViewCount()),"view_count");
+        wrapper.orderByDesc(!StringUtils.isEmpty(completeCourseInfo.getPrice()),"price");
+        wrapper.orderByDesc(!StringUtils.isEmpty(completeCourseInfo.getBuyCount()),"buy_count");
 
         Page<CompleteCourseInfo> completeCoursePage = eduCourseService.getCompleteCoursePage(new Page<>(currentPage, limit), wrapper);
         Map<String, Object> map = new HashMap<>();

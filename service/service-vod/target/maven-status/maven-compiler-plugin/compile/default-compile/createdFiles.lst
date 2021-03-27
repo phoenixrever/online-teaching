@@ -1,9 +1,10 @@
-com\phoenixhell\serviceVod\util\Vod.class
 com\phoenixhell\serviceVod\util\ProgressBar.class
 com\phoenixhell\serviceVod\Listener\ProgressListener.class
 com\phoenixhell\serviceVod\controller\VideoUploadController.class
 com\phoenixhell\serviceVod\Listener\ProgressListener$1.class
-com\phoenixhell\serviceVod\ServiceVod8003.class
 com\phoenixhell\serviceVod\service\VideoUploadService.class
+com\phoenixhell\serviceVod\controller\VodPlayController.class
 com\phoenixhell\serviceVod\service\impl\VideoUploadServiceImpl.class
 com\phoenixhell\serviceVod\Config\VodServiceConfig.class
+com\phoenixhell\serviceVod\util\Vod.class
+com\phoenixhell\serviceVod\ServiceVod8003.class

@@ -1,0 +1,7 @@
+com\phoenixhell\serviceVod\UploadVideoDemo.class
+com\phoenixhell\serviceVod\InitConfigProperties.class
+com\phoenixhell\serviceVod\Vod.class
+com\phoenixhell\serviceVod\PutObjectProgressListener.class
+com\phoenixhell\serviceVod\TestVod.class
+com\phoenixhell\serviceVod\PutObjectProgressListener$1.class
+com\phoenixhell\serviceVod\RefreshSTSTokenImpl.class

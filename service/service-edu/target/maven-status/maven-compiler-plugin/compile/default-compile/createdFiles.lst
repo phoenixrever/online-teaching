@@ -9,6 +9,7 @@ com\phoenixhell\serviceEdu\entity\EduTeacher.class
 com\phoenixhell\serviceEdu\mapper\EduVideoMapper.class
 com\phoenixhell\serviceEdu\mapper\EduTeacherMapper.class
 com\phoenixhell\serviceEdu\controller\EduCourseDescriptionController.class
+com\phoenixhell\serviceEdu\controller\front\EduController.class
 com\phoenixhell\serviceEdu\vodClient\VodServiceFallBack.class
 com\phoenixhell\serviceEdu\service\EduTeacherService.class
 com\phoenixhell\serviceEdu\controller\EduLoginController.class
