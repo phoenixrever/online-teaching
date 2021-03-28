@@ -17,6 +17,7 @@
         <module>service-vod</module>
         <module>service-cms</module>
         <module>service-ucenter</module>
+        <module>service-order</module>
     </modules>
 
     <dependencies>
@@ -72,7 +73,12 @@
             <groupId>org.apache.velocity</groupId>
             <artifactId>velocity-engine-core</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>3.4.1</version>
+            <scope>test</scope>
+        </dependency>
         <!--swagger-->
         <dependency>
             <groupId>io.springfox</groupId>

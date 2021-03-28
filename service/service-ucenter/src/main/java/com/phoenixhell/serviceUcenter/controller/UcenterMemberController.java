@@ -40,7 +40,15 @@ public class UcenterMemberController {
     @GetMapping("/info")
     public CommonResult getUserInfoByToken(HttpServletRequest request){
         UcenterMember user =ucenterMemberService.getUserInfoByToken(request);
+        user.setPassword(null);
         return CommonResult.ok().emptyData().data("user",user);
+    }
+
+    @GetMapping("/feignInfo/{userId}")
+    public CommonResult getUserInfoByTokenId( @PathVariable String userId){
+        UcenterMember userInfo =ucenterMemberService.getUserInfoByTokenId(userId);
+        userInfo.setPassword(null);
+        return CommonResult.ok().emptyData().data("userInfo",userInfo);
     }
 }
 

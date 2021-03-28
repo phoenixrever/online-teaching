@@ -7,15 +7,18 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.phoenixhell.serviceEdu.entity.EduCourse;
 import com.phoenixhell.serviceEdu.entity.EduCourseDescription;
+import com.phoenixhell.serviceEdu.entity.EduTeacher;
 import com.phoenixhell.serviceEdu.entity.EduVideo;
 import com.phoenixhell.serviceEdu.entity.vo.CompleteCourseInfo;
 import com.phoenixhell.serviceEdu.entity.vo.Course;
 import com.phoenixhell.serviceEdu.mapper.EduCourseMapper;
 import com.phoenixhell.serviceEdu.service.EduCourseDescriptionService;
 import com.phoenixhell.serviceEdu.service.EduCourseService;
+import com.phoenixhell.serviceEdu.service.EduTeacherService;
 import com.phoenixhell.serviceEdu.service.EduVideoService;
 import com.phoenixhell.servicebase.exceptionhandler.MyException;
 import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -43,6 +46,8 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
     private EduCourseMapper eduCourseMapper;
     @Resource
     private EduVideoService eduVideoService;
+    @Autowired
+    private EduTeacherService eduTeacherService;
 
     @Override
     @Transactional
@@ -64,9 +69,11 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
     @Override
     public Course getCourseById(String id) {
         EduCourse eduCourse = this.getById(id);
+        EduTeacher teacher = eduTeacherService.query().eq("id", eduCourse.getTeacherId()).one();
         EduCourseDescription eduCourseDescription = eduCourseDescriptionService.getById(id);
         BeanUtils.copyProperties(eduCourse, course);
         course.setDescription(eduCourseDescription.getDescription());
+        course.setTeacherName(teacher.getName());
         return course;
     }
 

@@ -18,6 +18,7 @@ public class CompleteCourseInfo {
     private Integer lessonNum;
     private String subjectLevelOne;
     private String subjectLevelTwo;
+    private String teacherId;
     private String teacherName;
     private BigDecimal ltPrice;
     private String gtPrice;

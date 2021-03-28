@@ -99,4 +99,14 @@ public class UcenterMemberServiceImpl extends ServiceImpl<UcenterMemberMapper, U
         return  member;
     }
 
+    @Override
+    public UcenterMember getUserInfoByTokenId(String userId) {
+        UcenterMember member = this.getById(userId);
+        if(member==null){
+            throw new MyException(20001,"无此用户");
+        }
+//        member.setPassword("");
+        return  member;
+    }
+
 }

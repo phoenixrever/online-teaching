@@ -4,7 +4,7 @@
 
     <select id="getCompleteCourseInfoById"
             resultType="com.phoenixhell.serviceEdu.entity.vo.CompleteCourseInfo">
-        SELECT ec.id as id,ec.`title` as title,ed.`description` as description,es.`title`as subjectLevelTwo,es2.`title` as subjectLevelOne ,et.`name` as teacherName,et.avatar as avatar,et.intro as intro, ec.`lesson_num` as lessonNum,ec.`cover` as cover ,ec.`price` as price
+        SELECT ec.id as id,ec.`title` as title,ed.`description` as description,es.`title`as subjectLevelTwo,es2.`title` as subjectLevelOne ,et.`id` as teacherId, et.`name` as teacherName,et.avatar as avatar,et.intro as intro, ec.`lesson_num` as lessonNum,ec.`cover` as cover ,ec.`price` as price
         FROM `edu_course` ec
         LEFT JOIN `edu_course_description` ed ON ec.`id`=ed.`id`
         LEFT JOIN `edu_subject` es ON ec.`subject_id`=es.`id`

@@ -57,7 +57,7 @@ public class EduCourseController {
     }
 
     @GetMapping("/get/{id}")
-    public CommonResult addCourse(@PathVariable("id") String id) {
+    public CommonResult getCourse(@PathVariable("id") String id) {
         Course course = eduCourseService.getCourseById(id);
         if (course != null) {
             return CommonResult.ok().emptyData().data("courseInfo", course);
