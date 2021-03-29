@@ -75,7 +75,7 @@ public class FrontTeacherController {
         wrapper.orderByDesc(!StringUtils.isEmpty(completeCourseInfo.getViewCount()),"view_count");
         wrapper.orderByDesc(!StringUtils.isEmpty(completeCourseInfo.getPrice()),"price");
         wrapper.orderByDesc(!StringUtils.isEmpty(completeCourseInfo.getBuyCount()),"buy_count");
-
+        wrapper.eq("is_deleted",0);
         Page<CompleteCourseInfo> completeCoursePage = eduCourseService.getCompleteCoursePage(new Page<>(currentPage, limit), wrapper);
         Map<String, Object> map = new HashMap<>();
         map.put("total", completeCoursePage.getTotal());

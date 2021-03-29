@@ -10,7 +10,7 @@
         LEFT JOIN `edu_subject` es ON ec.`subject_id`=es.`id`
         LEFT JOIN `edu_subject` es2 ON ec.`subject_parent_id`=es2.`id`
         LEFT JOIN `edu_teacher` et ON ec.`teacher_id`=et.`id`
-        WHERE ec.id=#{id}
+        WHERE is_deleted=0 and ec.id=#{id}
     </select>
 
     <select id="getCompleteCoursePage"

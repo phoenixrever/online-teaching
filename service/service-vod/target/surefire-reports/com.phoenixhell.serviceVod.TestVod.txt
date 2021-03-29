@@ -1,4 +1,18 @@
 -------------------------------------------------------------------------------
 Test set: com.phoenixhell.serviceVod.TestVod
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.023 s - in com.phoenixhell.serviceVod.TestVod
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 100.779 s <<< FAILURE! - in com.phoenixhell.serviceVod.TestVod
+testPlayAuth  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.requestContextFilter
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.phoenixhell.serviceVod.Config.VodServiceConfig] for bean with name 'vodServiceConfig' defined in file [E:\online-teaching\service\service-vod\target\classes\com\phoenixhell\serviceVod\Config\VodServiceConfig.class]; nested exception is java.lang.ClassNotFoundException: com.phoenixhell.serviceVod.Config.VodServiceConfig
+Caused by: java.lang.ClassNotFoundException: com.phoenixhell.serviceVod.Config.VodServiceConfig
+
+testPlayInfo  Time elapsed: 0 s  <<< ERROR!
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.phoenixhell.serviceVod.TestVod': Unsatisfied dependency expressed through field 'initConfigProperties'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.phoenixhell.serviceVod.InitConfigProperties' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.phoenixhell.serviceVod.InitConfigProperties' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+
+testUpload  Time elapsed: 0 s  <<< ERROR!
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.phoenixhell.serviceVod.TestVod': Unsatisfied dependency expressed through field 'initConfigProperties'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.phoenixhell.serviceVod.InitConfigProperties' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.phoenixhell.serviceVod.InitConfigProperties' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+

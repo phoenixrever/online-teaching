@@ -69,7 +69,8 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
     @Override
     public Course getCourseById(String id) {
         EduCourse eduCourse = this.getById(id);
-        EduTeacher teacher = eduTeacherService.query().eq("id", eduCourse.getTeacherId()).one();
+        EduTeacher teacher= eduTeacherService.getById( eduCourse.getTeacherId());
+//        EduTeacher teacher = eduTeacherService.query().eq("id", eduCourse.getTeacherId()).one();
         EduCourseDescription eduCourseDescription = eduCourseDescriptionService.getById(id);
         BeanUtils.copyProperties(eduCourse, course);
         course.setDescription(eduCourseDescription.getDescription());

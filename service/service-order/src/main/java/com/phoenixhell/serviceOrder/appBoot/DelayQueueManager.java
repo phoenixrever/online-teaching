@@ -7,9 +7,11 @@ import org.apache.poi.ss.formula.functions.T;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
+import java.util.Set;
 import java.util.concurrent.DelayQueue;
 import java.util.concurrent.Delayed;
 import java.util.concurrent.ExecutorService;
@@ -25,9 +27,10 @@ import java.util.concurrent.Executors;
 @Data
 public class DelayQueueManager implements ApplicationRunner {
     private DelayQueue<Order> delayQueue =new DelayQueue<>();
-
     @Autowired
     private OrderService orderService;
+    @Autowired
+    private RedisTemplate<String,String> redisTemplate;
 //    public void deleteUnPayedOrder(T t){
 //        Class clazz= t.getClass();
 //        try {
@@ -47,6 +50,18 @@ public class DelayQueueManager implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
         ExecutorService threadpool = Executors.newSingleThreadExecutor();
         threadpool.execute(()-> {
+            Set<String> order_delay = redisTemplate.opsForZSet().rangeByScore("order_delay", 0, Double.parseDouble(String.valueOf(System.currentTimeMillis())));
+            if(order_delay!=null && order_delay.size()!=0){
+                order_delay.forEach(e->{
+                    String s = new String(e.getBytes());
+                    System.out.println("************"+s);
+                    Order order = orderService.getById(s);
+                    System.out.println(order);
+                    if(order!=null){
+                        orderService.removeById(s);
+                    }
+                });
+            }
             try {
                 while (true) {
                     Order take = delayQueue.take();
