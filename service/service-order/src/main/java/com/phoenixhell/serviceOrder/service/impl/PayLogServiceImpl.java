@@ -31,7 +31,7 @@ public class PayLogServiceImpl extends ServiceImpl<PayLogMapper, PayLog> impleme
     @Autowired
     private OrderService orderService;
     @Override
-    public Map<String, String> createQR(String orderNo) {
+    public Map<String, Object> createQR(String orderNo) {
         Map<String,String> m = null;
         Map map = null;
         try {
@@ -106,7 +106,7 @@ public class PayLogServiceImpl extends ServiceImpl<PayLogMapper, PayLog> impleme
         //获取订单id
         String orderNo = map.get("out_trade_no");
         //根据订单id查询订单信息
-        Order order = orderService.query().eq("order_id", orderNo).one();
+        Order order = orderService.query().eq("order_no", orderNo).one();
         if(order.getStatus().intValue() == 1) return;
         order.setStatus(1);
         orderService.updateById(order);

@@ -15,7 +15,7 @@ import java.util.Map;
  */
 public interface PayLogService extends IService<PayLog> {
 
-    Map<String, String> createQR(String orderNo);
+    Map<String, Object> createQR(String orderNo);
 
     Map<String, String> queryPayStatus(String orderNo);
 

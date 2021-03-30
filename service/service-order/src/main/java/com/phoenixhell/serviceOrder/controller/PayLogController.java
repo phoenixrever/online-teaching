@@ -23,10 +23,12 @@ import java.util.Map;
 public class PayLogController {
     @Autowired
     private PayLogService payLogService;
+
+//    生成二维码
     @GetMapping("/createQR/{orderNo}")
     public CommonResult createQR(@PathVariable String orderNo){
-        Map<String,String> map = payLogService.createQR(orderNo);
-        return CommonResult.ok().emptyData().stringData(map);
+        Map<String,Object> map = payLogService.createQR(orderNo);
+        return CommonResult.ok().emptyData().data(map);
     }
 
     @GetMapping("/queryPayStatus/{orderNo}")
@@ -40,9 +42,9 @@ public class PayLogController {
             //更改订单状态
             payLogService.updateOrderStatus(map);
             return CommonResult.ok().emptyData().data("state","success");
+        }else{
+            return CommonResult.ok().emptyData().data("code",25000);
         }
-
-        return CommonResult.ok().emptyData().data("code",25000);
     }
 }
 

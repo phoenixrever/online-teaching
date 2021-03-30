@@ -48,7 +48,8 @@ public class OrderController {
     }
     @GetMapping("/payStatus/{courseId}/{userId}")
     public CommonResult payStatus(@PathVariable String courseId, @PathVariable String userId){
-        Integer count = orderService.query().eq("course_id", courseId).eq("member_id", userId).count();
+        Integer count = orderService.query().eq("course_id", courseId).eq("member_id", userId)
+                .eq("status",1).count();
         if(count>0){
             return CommonResult.ok().emptyData().data("isPayed",true);
         }else{

@@ -63,7 +63,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
             order.setNickname(userInfoMap.get("nickname"));
             order.setStatus(0);
             order.setPayType(1);
-            order.setDelayTime(System.currentTimeMillis()+1000*60*1);
+            order.setDelayTime(System.currentTimeMillis()+1000*60*60);
             boolean save = this.save(order);
             delayQueueManager.getDelayQueue().offer(order);
             System.out.println(order);
