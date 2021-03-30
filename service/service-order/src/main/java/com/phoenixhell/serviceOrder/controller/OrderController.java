@@ -46,5 +46,14 @@ public class OrderController {
         String deletedOrder = orderService.deleteOrder(id);
         return CommonResult.ok().emptyData().data("order",orderService.getById(id));
     }
+    @GetMapping("/payStatus/{courseId}/{userId}")
+    public CommonResult payStatus(@PathVariable String courseId, @PathVariable String userId){
+        Integer count = orderService.query().eq("course_id", courseId).eq("member_id", userId).count();
+        if(count>0){
+            return CommonResult.ok().emptyData().data("isPayed",true);
+        }else{
+            return CommonResult.ok().emptyData().data("isPayed",false);
+        }
+    }
 }
 
