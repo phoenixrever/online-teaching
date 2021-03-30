@@ -1,10 +1,12 @@
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\controller\front\EduController.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\entity\vo\Course.java
+E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\mapper\EduCommentMapper.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\service\impl\EduCourseServiceImpl.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\listener\EasyExcelReadListener.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\controller\EduCourseDescriptionController.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\service\impl\EduVideoServiceImpl.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\entity\EduVideo.java
+E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\controller\EduCommentController.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\vodClient\VodService.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\ServiceEdu8001.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\service\impl\EduChapterServiceImpl.java
@@ -22,9 +24,11 @@ E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\mapper\EduTeacherMapper.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\controller\EduCourseController.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\controller\EduLoginController.java
+E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\entity\EduComment.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\entity\vo\CompleteCourseInfo.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\controller\EduSubjectController.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\mapper\EduCourseMapper.java
+E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\service\impl\EduCommentServiceImpl.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\controller\EduTeacherController.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\controller\front\FrontTeacherController.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\entity\EduTeacher.java
@@ -32,6 +36,7 @@ E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\controller\EduChapterController.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\service\EduVideoService.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\mapper\EduCourseDescriptionMapper.java
+E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\service\EduCommentService.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\entity\TwoSubject.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\entity\vo\TeacherQuery.java
 E:\online-teaching\service\service-edu\src\main\java\com\phoenixhell\serviceEdu\mapper\EduSubjectMapper.java

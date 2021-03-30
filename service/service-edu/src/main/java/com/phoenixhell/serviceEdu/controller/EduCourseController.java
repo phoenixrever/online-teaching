@@ -125,6 +125,7 @@ public class EduCourseController {
         wrapper.like(!StringUtils.isEmpty(completeCourseInfo.getTeacherName()), "et.name", completeCourseInfo.getTeacherName());
         wrapper.eq(!StringUtils.isEmpty(completeCourseInfo.getStatus()), "ec.status",completeCourseInfo.getStatus());
         wrapper.orderByDesc("ec.gmt_create");
+        wrapper.eq("is_deleted",0);
         Page<CompleteCourseInfo> completeCoursePage = eduCourseService.getCompleteCoursePage(new Page<>(currentPage, limit), wrapper);
         Map<String, Object> map = new HashMap<>();
         map.put("total", completeCoursePage.getTotal());

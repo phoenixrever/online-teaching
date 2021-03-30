@@ -12,6 +12,7 @@ import com.phoenixhell.servicebase.exceptionhandler.MyException;
 import com.phoenixhell.utils.CommonResult;
 import com.phoenixhell.utils.JwtUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -20,6 +21,7 @@ import java.math.BigDecimal;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 
 /**
  * <p>
@@ -37,6 +39,8 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     private FeignUcenterService feignUcenterService;
     @Autowired
     private DelayQueueManager delayQueueManager;
+    @Autowired
+    private RedisTemplate<String,String> redisTemplate;
     @Override
     public String createOrder(String courseId, String userId) {
         CommonResult course = feignCourseService.getCourse(courseId);
@@ -59,9 +63,11 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
             order.setNickname(userInfoMap.get("nickname"));
             order.setStatus(0);
             order.setPayType(1);
-            order.setDelayTime(System.currentTimeMillis()+1000*60*30);
+            order.setDelayTime(System.currentTimeMillis()+1000*60*1);
             boolean save = this.save(order);
             delayQueueManager.getDelayQueue().offer(order);
+            System.out.println(order);
+            redisTemplate.opsForZSet().add("order_delay",order.getId(),order.getDelayTime());
             if(!save){
                 throw new MyException(20001, "创建订单失败");
             }
