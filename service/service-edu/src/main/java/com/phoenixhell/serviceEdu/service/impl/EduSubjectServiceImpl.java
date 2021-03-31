@@ -29,8 +29,6 @@ public class EduSubjectServiceImpl extends ServiceImpl<EduSubjectMapper, EduSubj
     @Resource
     private EasyExcelReadListener easyExcelReadListener;
 
-    @Resource
-    private EduSubjectMapper eduSubjectMapper;
     @Override
     public void readFromExcel(MultipartFile file) throws IOException {
         EasyExcel.read(file.getInputStream(), EduSubjectExcel.class,easyExcelReadListener).sheet().doRead();
@@ -39,6 +37,6 @@ public class EduSubjectServiceImpl extends ServiceImpl<EduSubjectMapper, EduSubj
     @Override
     public List<OneSubject> getAllSubject() {
         //service 里面调用basemapper  或者调用this 自己本身的方法
-        return eduSubjectMapper.getAllSubject();
+        return baseMapper.getAllSubject();
     }
 }

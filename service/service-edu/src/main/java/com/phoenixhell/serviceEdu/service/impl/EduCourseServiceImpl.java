@@ -42,8 +42,7 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
     private EduCourseDescription eduCourseDescription;
     @Resource
     private EduCourseDescriptionService eduCourseDescriptionService;
-    @Resource
-    private EduCourseMapper eduCourseMapper;
+
     @Resource
     private EduVideoService eduVideoService;
     @Autowired
@@ -97,12 +96,12 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
 
     @Override
     public CompleteCourseInfo getCompleteCourseInfoById(String id) {
-        return eduCourseMapper.getCompleteCourseInfoById(id);
+        return baseMapper.getCompleteCourseInfoById(id);
     }
 
     @Override
     public Page<CompleteCourseInfo> getCompleteCoursePage(IPage<CompleteCourseInfo> page, Wrapper<CompleteCourseInfo> queryWrapper) {
-        return eduCourseMapper.getCompleteCoursePage(page, queryWrapper);
+        return baseMapper.getCompleteCoursePage(page, queryWrapper);
     }
 
 

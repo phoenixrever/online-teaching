@@ -21,10 +21,8 @@ import java.util.List;
  */
 @Service
 public class EduChapterServiceImpl extends ServiceImpl<EduChapterMapper, EduChapter> implements EduChapterService {
-    @Resource
-    private EduChapterMapper eduChapterMapper;
     @Override
     public List<EduChapter> getChapterById(String id) {
-        return eduChapterMapper.getChapterById(id);
+        return baseMapper.getChapterById(id);
     }
 }

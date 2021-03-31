@@ -2,7 +2,9 @@ com\phoenixhell\serviceOrder\controller\OrderController.class
 com\phoenixhell\serviceOrder\mapper\OrderMapper.class
 com\phoenixhell\serviceOrder\ServiceOrder8007.class
 com\phoenixhell\serviceOrder\service\FeignUcenterService.class
+com\phoenixhell\serviceOrder\utils\HttpClient.class
 com\phoenixhell\serviceOrder\entity\Order.class
+com\phoenixhell\serviceOrder\utils\HttpClient$1.class
 com\phoenixhell\serviceOrder\controller\PayLogController.class
 com\phoenixhell\serviceOrder\service\FeignCourseService.class
 com\phoenixhell\serviceOrder\entity\PayLog.class

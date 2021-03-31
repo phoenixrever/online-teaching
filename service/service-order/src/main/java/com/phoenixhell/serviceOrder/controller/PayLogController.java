@@ -1,7 +1,6 @@
 package com.phoenixhell.serviceOrder.controller;
 
 
-import com.baomidou.mybatisplus.extension.api.R;
 import com.phoenixhell.serviceOrder.service.PayLogService;
 import com.phoenixhell.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;

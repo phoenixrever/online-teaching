@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Map;
 
 /**
  * <p>
@@ -49,6 +50,12 @@ public class UcenterMemberController {
         UcenterMember userInfo =ucenterMemberService.getUserInfoByTokenId(userId);
         userInfo.setPassword(null);
         return CommonResult.ok().emptyData().data("userInfo",userInfo);
+    }
+
+    @GetMapping("/registerCount/{day}")
+    public Integer registerCount(@PathVariable String day){
+        Integer count = ucenterMemberService.query().eq("DATE(gmt_create)", day).count();
+        return count;
     }
 }
 

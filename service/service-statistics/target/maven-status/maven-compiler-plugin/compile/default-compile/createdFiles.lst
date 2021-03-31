@@ -1,0 +1,7 @@
+com\phoenixhell\serviceStatistics\entity\StatisticsDaily.class
+com\phoenixhell\serviceStatistics\service\FeignUcenterService.class
+com\phoenixhell\serviceStatistics\controller\StatisticsDailyController.class
+com\phoenixhell\serviceStatistics\service\impl\StatisticsDailyServiceImpl.class
+com\phoenixhell\serviceStatistics\ServiceStatistics8008.class
+com\phoenixhell\serviceStatistics\mapper\StatisticsDailyMapper.class
+com\phoenixhell\serviceStatistics\service\StatisticsDailyService.class
