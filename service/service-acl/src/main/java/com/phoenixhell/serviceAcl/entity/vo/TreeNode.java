@@ -14,6 +14,14 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class TreeNode {
+    private String id;
+    private String pid;
     private String label;
     private List<TreeNode> children;
+
+    public TreeNode(String id, String pid, String label) {
+        this.id = id;
+        this.pid = pid;
+        this.label = label;
+    }
 }

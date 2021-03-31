@@ -32,10 +32,10 @@ public class StatisticsDailyController {
     private FeignUcenterService feignUcenterService;
 
     @PostMapping("/dailyCount/{startDate}/{endDate}")
-    public CommonResult registerCount(@RequestBody Map<String, List<String>> map, @PathVariable String startDate, @PathVariable String endDate) {
-        List<String> type = map.get("type");
+    public CommonResult registerCount(@RequestBody List<String> list, @PathVariable String startDate, @PathVariable String endDate) {
+
         HashMap<String, List> daysMap = new HashMap<>();
-        type.forEach(t -> {
+        list.forEach(t -> {
             List<StatisticsDaily> daysList = statisticsDailyService.query().between("Date(date_calculated)", startDate, endDate).select(t).list();
             ArrayList<Integer> alist = new ArrayList<>();
             if (daysList != null) {

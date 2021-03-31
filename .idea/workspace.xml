@@ -6,23 +6,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="386e7ef7-476a-454e-860b-396192b5d42d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_15_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http2_4_1_43_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_43_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_socks_4_1_43_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_proxy_4_1_43_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_linux_x86_64_4_1_43_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_43_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_addons_reactor_extra_3_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_netty_reactor_netty_0_9_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jakarta_el_3_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_reactor_netty_2_2_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_webflux_2_2_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_gateway_core_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_gateway_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webflux_5_2_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_synchronoss_cloud_nio_multipart_parser_1_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_synchronoss_cloud_nio_stream_storage_1_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-edu/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-edu/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-edu/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-edu/target/classes/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-order/src/main/java/com/phoenixhell/serviceOrder/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/phoenixhell/serviceOrder/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-order/src/main/java/com/phoenixhell/serviceOrder/controller/PayLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/phoenixhell/serviceOrder/controller/PayLogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-order/src/main/java/com/phoenixhell/serviceOrder/service/PayLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/phoenixhell/serviceOrder/service/PayLogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-order/src/main/java/com/phoenixhell/serviceOrder/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/phoenixhell/serviceOrder/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-order/src/main/java/com/phoenixhell/serviceOrder/service/impl/PayLogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/phoenixhell/serviceOrder/service/impl/PayLogServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-order/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-order/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/target/classes/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-order/target/classes/com/phoenixhell/serviceOrder/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/phoenixhell/serviceOrder/controller/OrderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-order/target/classes/com/phoenixhell/serviceOrder/controller/PayLogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/phoenixhell/serviceOrder/controller/PayLogController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-order/target/classes/com/phoenixhell/serviceOrder/service/PayLogService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/phoenixhell/serviceOrder/service/PayLogService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-order/target/classes/com/phoenixhell/serviceOrder/service/impl/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/phoenixhell/serviceOrder/service/impl/OrderServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-order/target/classes/com/phoenixhell/serviceOrder/service/impl/PayLogServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/phoenixhell/serviceOrder/service/impl/PayLogServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-ucenter/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-ucenter/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-ucenter/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-ucenter/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/com/phoenixhell/gateway/handler/ErrorHandlerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/classes/com/phoenixhell/gateway/handler/ErrorHandlerConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/controller/AclPermissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/controller/AclPermissionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/entity/vo/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/entity/vo/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-acl/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/controller/AclPermissionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/controller/AclPermissionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/entity/vo/TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/entity/vo/TreeNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-edu/src/main/java/com/phoenixhell/serviceEdu/controller/EduLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-edu/src/main/java/com/phoenixhell/serviceEdu/controller/EduLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-edu/target/classes/com/phoenixhell/serviceEdu/controller/EduLoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-edu/target/classes/com/phoenixhell/serviceEdu/controller/EduLoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-statistics/src/main/java/com/phoenixhell/serviceStatistics/controller/StatisticsDailyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-statistics/src/main/java/com/phoenixhell/serviceStatistics/controller/StatisticsDailyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-statistics/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-statistics/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-statistics/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-statistics/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-statistics/target/classes/com/phoenixhell/serviceStatistics/controller/StatisticsDailyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-statistics/target/classes/com/phoenixhell/serviceStatistics/controller/StatisticsDailyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-ucenter/src/main/java/com/phoenixhell/serviceUcenter/controller/UcenterMemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-ucenter/src/main/java/com/phoenixhell/serviceUcenter/controller/UcenterMemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-ucenter/target/classes/com/phoenixhell/serviceUcenter/controller/UcenterMemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-ucenter/target/classes/com/phoenixhell/serviceUcenter/controller/UcenterMemberController.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,19 +140,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ServiceOrder8007">
-    <configuration name="CodeGenerator.run (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="service-order" />
+  <component name="RunManager" selected="Spring Boot.ServiceStatistics8008">
+    <configuration name="ApiGateway9527" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="api-gateway" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.phoenixhell.serviceOrder.*" />
+          <option name="PATTERN" value="com.phoenixhell.gateway.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.phoenixhell.serviceOrder" />
-      <option name="MAIN_CLASS_NAME" value="com.phoenixhell.serviceOrder.CodeGenerator" />
-      <option name="METHOD_NAME" value="run" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.phoenixhell.gateway.ApiGateway9527" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceAcl8009" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="service-acl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.phoenixhell.serviceAcl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.phoenixhell.serviceAcl.ServiceAcl8009" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -150,19 +180,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceOrder8007" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="service-order" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.phoenixhell.serviceOrder.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.phoenixhell.serviceOrder.ServiceOrder8007" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ServiceOss8002" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="service-oss" />
       <extension name="coverage">
@@ -176,6 +193,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ServiceStatistics8008" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="service-statistics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.phoenixhell.serviceStatistics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.phoenixhell.serviceStatistics.ServiceStatistics8008" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ServiceUcenter8006" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="service-ucenter" />
       <extension name="coverage">
@@ -185,19 +215,6 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.phoenixhell.serviceUcenter.ServiceUcenter8006" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServiceVod8003" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="service-vod" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.phoenixhell.serviceVod.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.phoenixhell.serviceVod.ServiceVod8003" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -216,21 +233,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.CodeGenerator.run (1)" />
       <item itemvalue="Spring Boot.serviceCms8004" />
       <item itemvalue="Spring Boot.ServiceOss8002" />
-      <item itemvalue="Spring Boot.ServiceEdu8001" />
       <item itemvalue="Spring Boot.ServiceUcenter8006" />
-      <item itemvalue="Spring Boot.ServiceOrder8007" />
-      <item itemvalue="Spring Boot.ServiceVod8003" />
+      <item itemvalue="Spring Boot.ServiceAcl8009" />
+      <item itemvalue="Spring Boot.ApiGateway9527" />
+      <item itemvalue="Spring Boot.ServiceEdu8001" />
+      <item itemvalue="Spring Boot.ServiceStatistics8008" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ServiceOrder8007" />
-        <item itemvalue="Spring Boot.ServiceVod8003" />
-        <item itemvalue="Spring Boot.ServiceUcenter8006" />
+        <item itemvalue="Spring Boot.ServiceStatistics8008" />
         <item itemvalue="Spring Boot.ServiceEdu8001" />
-        <item itemvalue="JUnit.CodeGenerator.run (1)" />
+        <item itemvalue="Spring Boot.ServiceUcenter8006" />
+        <item itemvalue="Spring Boot.ApiGateway9527" />
+        <item itemvalue="Spring Boot.ServiceAcl8009" />
       </list>
     </recent_temporary>
   </component>
@@ -242,17 +259,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e7a97580" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2595289e" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e7a97580" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@67f8604a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e7a97580" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@f827fef8" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2595289e" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@d63f3775" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -286,7 +298,8 @@
       <workItem from="1616763867988" duration="4131000" />
       <workItem from="1616852622574" duration="3198000" />
       <workItem from="1616891823605" duration="33347000" />
-      <workItem from="1617107034017" duration="9486000" />
+      <workItem from="1617107034017" duration="9540000" />
+      <workItem from="1617184592441" duration="18888000" />
     </task>
     <task id="LOCAL-00002" summary="2021-03-26 17:53">
       <created>1616712776290</created>
@@ -309,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617112823712</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="2021-03-30 22:53">
+      <created>1617117709057</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1617117709057</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
