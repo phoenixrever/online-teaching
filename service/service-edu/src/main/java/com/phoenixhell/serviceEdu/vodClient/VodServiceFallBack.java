@@ -7,6 +7,6 @@ import org.springframework.stereotype.Component;
 public class VodServiceFallBack implements VodService {
     @Override
     public CommonResult deleteByVideoId(String videoId) {
-        return CommonResult.error().emptyData().data("fallback","callback service");
+        return CommonResult.error().data("fallback","callback service");
     }
 }

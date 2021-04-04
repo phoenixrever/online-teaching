@@ -29,7 +29,7 @@ public class VodPlayController {
             GetPlayInfoResponse playInfo = Vod.getPlayInfo(defaultAcsClient, videoId);
             List<GetPlayInfoResponse.PlayInfo> playInfoList = playInfo.getPlayInfoList();
             String playURL=playInfoList.get(0).getPlayURL();
-            return CommonResult.ok().emptyData().data("playAuth",playAuth).data("playURL",playURL);
+            return CommonResult.ok().data("playAuth",playAuth).data("playURL",playURL);
         } catch (Exception e) {
             e.printStackTrace();
             System.out.print("ErrorMessage = " + e.getLocalizedMessage());

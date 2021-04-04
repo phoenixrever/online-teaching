@@ -28,7 +28,7 @@ public class AclUser implements Serializable {
     @TableId(value = "id", type = IdType.ASSIGN_ID)
     private String id;
 
-    @ApiModelProperty(value = "微信openid")
+    @ApiModelProperty(value = "用户名")
     private String username;
 
     @ApiModelProperty(value = "密码")

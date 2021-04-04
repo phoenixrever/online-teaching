@@ -21,7 +21,7 @@ public class OssController {
     @PostMapping("/upload")
     public CommonResult uploadOss(MultipartFile file,@RequestParam("folder") String folder){
         String fileUrl = ossService.uploadFileToOss(file,folder);
-        return CommonResult.ok().emptyData().data("fileUrl",fileUrl);
+        return CommonResult.ok().data("fileUrl",fileUrl);
     }
 }
 

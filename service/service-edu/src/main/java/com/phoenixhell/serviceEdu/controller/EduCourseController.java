@@ -50,9 +50,9 @@ public class EduCourseController {
     public CommonResult addCourse(@RequestBody Course course) {
         String id = eduCourseService.saveCourse(course);
         if (id != null) {
-            return CommonResult.ok().emptyData().data("id", id);
+            return CommonResult.ok().data("id", id);
         } else {
-            return CommonResult.error().emptyData().data("添加结果", "添加失败");
+            return CommonResult.error().data("添加结果", "添加失败");
         }
     }
 
@@ -60,9 +60,9 @@ public class EduCourseController {
     public CommonResult getCourse(@PathVariable("id") String id) {
         Course course = eduCourseService.getCourseById(id);
         if (course != null) {
-            return CommonResult.ok().emptyData().data("courseInfo", course);
+            return CommonResult.ok().data("courseInfo", course);
         } else {
-            return CommonResult.error().emptyData().data("查询结果", "查询失败");
+            return CommonResult.error().data("查询结果", "查询失败");
         }
     }
 
@@ -103,7 +103,7 @@ public class EduCourseController {
 //            wrapper.like(!StringUtils.isEmpty(completeCourseInfo.getTeacherName()), "et.name", completeCourseInfo.getTeacherName());
 //        }
 //        IPage<CompleteCourseInfo> completeCoursePage = eduCourseService.getCompleteCoursePage(new Page<>(currentPage, limit), wrapper);
-//        return CommonResult.ok().emptyData().data("list", completeCoursePage.getRecords());
+//        return CommonResult.ok().data("list", completeCoursePage.getRecords());
 //    }
 
     /**
@@ -130,22 +130,22 @@ public class EduCourseController {
         Map<String, Object> map = new HashMap<>();
         map.put("total", completeCoursePage.getTotal());
         map.put("completeCourseInfo", completeCoursePage.getRecords());
-        return CommonResult.ok().emptyData().data(map); }
+        return CommonResult.ok().data(map); }
 
     @PutMapping("/update")
     public CommonResult updateCourse(@RequestBody Course course) {
         Boolean aBoolean = eduCourseService.updateCourseById(course);
         if (aBoolean) {
-            return CommonResult.ok().emptyData().data("修改结果", "修改成功");
+            return CommonResult.ok().data("修改结果", "修改成功");
         } else {
-            return CommonResult.error().emptyData().data("修改结果", "修改失败");
+            return CommonResult.error().data("修改结果", "修改失败");
         }
     }
 
     @GetMapping("/publish/{id}")
     public CommonResult publish(@PathVariable("id") String id) {
         CompleteCourseInfo completeCourseInfo = eduCourseService.getCompleteCourseInfoById(id);
-        return CommonResult.ok().emptyData().data("completeCourseInfo", completeCourseInfo);
+        return CommonResult.ok().data("completeCourseInfo", completeCourseInfo);
     }
 
     @PutMapping("/publishCourse/{id}")
@@ -154,7 +154,7 @@ public class EduCourseController {
         eduCourse.setId(id);
         eduCourse.setStatus("Normal");
         eduCourseService.updateById(eduCourse);
-        return CommonResult.ok().emptyData();
+        return CommonResult.ok();
     }
     @DeleteMapping("/delete/{id}")
     public CommonResult deleteCourse(@PathVariable("id")String id){
@@ -190,7 +190,7 @@ public class EduCourseController {
         boolean removeDescription =eduCourseDescriptionService.removeById(id);
         boolean removeEduCourse = eduCourseService.removeById(id);
         if(removeChapter && removeDescription && removeEduCourse){
-            return CommonResult.ok().emptyData();
+            return CommonResult.ok();
         }else{
             throw new MyException(20001,"删除章节,描述,课程有失败事务回滚");
         }

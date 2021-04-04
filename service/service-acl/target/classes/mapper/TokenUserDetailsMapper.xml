@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.phoenixhell.serviceAcl.mapper.TokenUserDetailsMapper">
+    <!-- 用于select查询公用抽取的列 -->
+    <sql id="columns">
+        p.id,p.pid,p.name,p.type,p.permission_value,path,p.component,p.icon,p.status,p.is_deleted,p.gmt_create,p.gmt_modified
+    </sql>
+
+    <select id="getPermissionListByUserId" resultType="java.security.Permission">
+        select
+        <include refid="columns"></include>
+        from acl_user_role ur
+        join acl_role_permission rp on ur.role_id=rp.role_id
+        join acl_permission p on p.id=rp.permission_id
+        where ur.user_id=#{userId}
+        and ur.is_deleted = 0
+        and rp.is_deleted = 0
+        and p.is_deleted = 0
+    </select>
+
+    <select id="getPermissionStringListByUserId" resultType="java.lang.String">
+        select
+        <include refid="columns"></include>
+        from acl_user_role ur
+        join acl_role_permission rp on ur.role_id=rp.role_id
+        join acl_permission p on p.id=rp.permission_id
+        where ur.user_id=#{userId}
+        and ur.is_deleted = 0
+        and rp.is_deleted = 0
+        and p.is_deleted = 0
+    </select>
+</mapper>

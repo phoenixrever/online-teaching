@@ -10,6 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>service-acl</artifactId>
-
+    <dependencies>
+        <dependency>
+            <groupId>com.phoenixhell</groupId>
+            <artifactId>spring-security</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>

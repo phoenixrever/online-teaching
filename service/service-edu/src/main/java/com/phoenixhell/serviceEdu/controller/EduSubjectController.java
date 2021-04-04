@@ -38,14 +38,14 @@ public class EduSubjectController {
             eduSubjectService.readFromExcel(file);
         } catch (IOException e) {
             e.printStackTrace();
-            return CommonResult.error().emptyData().data("error",e.getMessage());
+            return CommonResult.error().data("error",e.getMessage());
         }
         return CommonResult.ok();
     }
     @GetMapping("/getAllSubject")
     public CommonResult getAllSubject(){
         List<OneSubject> allSubject = eduSubjectService.getAllSubject();
-        return CommonResult.ok().emptyData().data("data",allSubject);
+        return CommonResult.ok().data("data",allSubject);
     }
 }
 

@@ -7,7 +7,7 @@ import com.phoenixhell.serviceUcenter.mapper.UcenterMemberMapper;
 import com.phoenixhell.serviceUcenter.service.UcenterMemberService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.phoenixhell.servicebase.exceptionhandler.MyException;
-import com.phoenixhell.utils.JwtUtils;
+import com.phoenixhell.utils.JwtTokenUtil;
 import com.phoenixhell.utils.MD5;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
@@ -44,7 +44,7 @@ public class UcenterMemberServiceImpl extends ServiceImpl<UcenterMemberMapper, U
         if(member.getIsDisabled()){
             throw new MyException(20001,"此账户被禁用");
         }
-        String token = JwtUtils.getJwtToken(member.getId(),member.getNickname());
+        String token = JwtTokenUtil.getJwtToken(member.getId(),member.getNickname());
         return token;
     }
 
@@ -84,13 +84,13 @@ public class UcenterMemberServiceImpl extends ServiceImpl<UcenterMemberMapper, U
                 throw new MyException(20001,"注册失败");
             }
         }
-        String token = JwtUtils.getJwtToken(ucenterMember.getId(),ucenterMember.getNickname());
+        String token = JwtTokenUtil.getJwtToken(ucenterMember.getId(),ucenterMember.getNickname());
         return token;
     }
 
     @Override
     public UcenterMember getUserInfoByToken(HttpServletRequest request) {
-        String id = JwtUtils.getMemberIdByJwtToken(request);
+        String id = JwtTokenUtil.getMemberIdByJwtToken(request);
         UcenterMember member = this.getById(id);
         if(member==null){
             throw new MyException(20001,"无此用户");

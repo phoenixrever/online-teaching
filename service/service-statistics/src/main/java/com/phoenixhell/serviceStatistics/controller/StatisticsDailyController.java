@@ -58,7 +58,7 @@ public class StatisticsDailyController {
             }
             daysMap.put(t, alist);
         });
-        return CommonResult.ok().emptyData().data("dailyList", daysMap);
+        return CommonResult.ok().data("dailyList", daysMap);
     }
 
     @GetMapping("/getDailyCount")

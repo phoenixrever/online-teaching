@@ -2,7 +2,7 @@ server:
   port: 9527
 spring:
   application:
-    name: service-gateway
+    name: server-gateway
   cloud:
     gateway:
       discovery:
@@ -40,24 +40,28 @@ spring:
           uri: lb://server-edu  #lb 负载均衡
           predicates:
             - Path=/serviceEdu/**   #断言,路径相匹配的进行路由
-        - id: service-ucenter
-          uri: lb://service-ucenter  #lb 负载均衡
+        - id: server-ucenter
+          uri: lb://server-ucenter  #lb 负载均衡
           predicates:
             - Path=/serviceUcenter/**
-        - id: service-order
-          uri: lb://service-order  #lb 负载均衡
+        - id: server-order
+          uri: lb://server-order  #lb 负载均衡
           predicates:
             - Path=/serviceOrder/**
-        - id: service-vod
-          uri: lb://service-vod #lb 负载均衡
+        - id: server-acl
+          uri: lb://server-acl  #lb 负载均衡
+          predicates:
+            - Path=/serviceAcl/**,/acl/**
+        - id: server-vod
+          uri: lb://server-vod #lb 负载均衡
           predicates:
             - Path=/serviceVod/**
-        - id: service-cms
-          uri: lb://service-cms  #lb 负载均衡
+        - id: server-cms
+          uri: lb://server-cms  #lb 负载均衡
           predicates:
             - Path=/serviceCms/**
-        - id: service-oss
-          uri: lb://service-oss  #lb 负载均衡
+        - id: server-oss
+          uri: lb://server-oss  #lb 负载均衡
           predicates:
             - Path=/serviceOss/**
     nacos:

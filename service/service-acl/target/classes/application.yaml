@@ -42,7 +42,6 @@ management:
     web:
       exposure:
         include: "*"
-
 #mybatis:
 #  mapper-locations: classpath:/*.xml
 #  type-aliases-package: com.phoenixhell.springcloud.entities
@@ -61,10 +60,10 @@ mybatis-plus:
 #logging:
 #  level:
 #    root: info
-logging:
-  level:
+#logging:
+#  level:
     #feign日志监控的接口 和级别
-    com.phoenixhell.springcloud.service.PaymentFeignService: debug
+#    com.phoenixhell.springcloud.service.PaymentFeignService: debug
 #feign:
 #  hystrix:
 #    enabled: true

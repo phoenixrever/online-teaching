@@ -50,6 +50,6 @@ public class EduController {
         Map<String,Object> map =new HashMap<>();
         map.put("courses",courses);
         map.put("teacher",teachers);
-        return CommonResult.ok().emptyData().data(map);
+        return CommonResult.ok().data(map);
     }
 }

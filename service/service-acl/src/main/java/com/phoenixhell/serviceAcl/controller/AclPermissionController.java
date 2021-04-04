@@ -27,7 +27,7 @@ import java.util.stream.Collectors;
  * @since 2021-03-31
  */
 @RestController
-@RequestMapping("/serviceAcl/acl-permission")
+@RequestMapping("/serviceAcl/aclPermission")
 public class AclPermissionController {
     @Autowired
     private AclPermissionService aclPermissionService;
@@ -88,8 +88,10 @@ public class AclPermissionController {
 
 
     private TreeNode permissionVo(AclPermission permission) {
-        return new TreeNode(permission.getId(), permission.getPid(), permission.getName());
+//        return new TreeNode(permission.getId(), permission.getPid(), permission.getName());
+        TreeNode treeNode = new TreeNode();
+        BeanUtils.copyProperties(permission,treeNode );
+        return treeNode;
     }
-
 }
 

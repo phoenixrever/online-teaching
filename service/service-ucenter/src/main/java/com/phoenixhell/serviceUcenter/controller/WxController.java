@@ -7,20 +7,17 @@ import com.phoenixhell.serviceUcenter.entity.WxProperties;
 import com.phoenixhell.serviceUcenter.service.UcenterMemberService;
 import com.phoenixhell.serviceUcenter.utils.HttpClientUtils;
 import com.phoenixhell.servicebase.exceptionhandler.MyException;
-import com.phoenixhell.utils.CommonResult;
-import com.phoenixhell.utils.JwtUtils;
+import com.phoenixhell.utils.JwtTokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import com.alibaba.fastjson.JSONObject;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.UUID;
 
 /**
@@ -108,7 +105,7 @@ public class WxController {
             e.printStackTrace();
             throw new MyException(20001,"微信注册失败");
         }
-        String token = JwtUtils.getJwtToken(ucenterMember.getId(), ucenterMember.getNickname());
+        String token = JwtTokenUtil.getJwtToken(ucenterMember.getId(), ucenterMember.getNickname());
         return "redirect:"+"http://localhost:3000?token="+token;
     }
 }

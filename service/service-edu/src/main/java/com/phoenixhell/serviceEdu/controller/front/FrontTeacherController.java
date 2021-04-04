@@ -47,21 +47,21 @@ public class FrontTeacherController {
         map.put("totalPages", teacherPage.getPages());
         map.put("hasPrevious", teacherPage.hasPrevious());
         map.put("hasNext", teacherPage.hasNext());
-        return CommonResult.ok().emptyData().data(map);
+        return CommonResult.ok().data(map);
     }
 
     @GetMapping("/course/{id}")
     public CommonResult getCourseByTeacherId(@PathVariable("id")String id){
         EduTeacher eduTeacher = eduTeacherService.getById(id);
         List<EduCourse> eduCourses = eduCourseService.query().eq("teacher_id", id).list();
-        return CommonResult.ok().emptyData().data("teacher",eduTeacher).data("course",eduCourses);
+        return CommonResult.ok().data("teacher",eduTeacher).data("course",eduCourses);
     }
 
     @GetMapping("/completeCourse/{id}")
     public CommonResult publish(@PathVariable("id") String id) {
         CompleteCourseInfo completeCourseInfo = eduCourseService.getCompleteCourseInfoById(id);
         List<EduChapter> chapter = eduChapterService.getChapterById(id);
-        return CommonResult.ok().emptyData().data("completeCourseInfo", completeCourseInfo).data("chapterList",chapter);
+        return CommonResult.ok().data("completeCourseInfo", completeCourseInfo).data("chapterList",chapter);
     }
 
     @PostMapping("/search/{currentPage}")
@@ -85,5 +85,5 @@ public class FrontTeacherController {
         map.put("hasPrevious", completeCoursePage.hasPrevious());
         map.put("hasNext", completeCoursePage.hasNext());
         map.put("allSubject", allSubject);
-        return CommonResult.ok().emptyData().data(map); }
+        return CommonResult.ok().data(map); }
 }

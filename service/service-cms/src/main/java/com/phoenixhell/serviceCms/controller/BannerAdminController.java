@@ -34,7 +34,7 @@ public class BannerAdminController {
     @GetMapping("/get/{id}")
     public CommonResult get(@PathVariable("id")String id){
         CrmBanner banner = crmBannerService.getById(id);
-        return CommonResult.ok().emptyData().data("banner",banner);
+        return CommonResult.ok().data("banner",banner);
     }
 
     @GetMapping("/list")
@@ -44,12 +44,12 @@ public class BannerAdminController {
 //    @CacheEvict(value = "homePage", allEntries=true)
     public CommonResult list(){
         List<CrmBanner> list = crmBannerService.list();
-        return CommonResult.ok().emptyData().data("list",list);
+        return CommonResult.ok().data("list",list);
     }
     @GetMapping("/page/{currentPage}")
     public CommonResult page(@PathVariable("currentPage")Long currentPage,@RequestParam("limit") Long limit){
         Page<CrmBanner> page = crmBannerService.page(new Page<CrmBanner>(currentPage, limit));
-        return CommonResult.ok().emptyData().data("list",page);
+        return CommonResult.ok().data("list",page);
     }
     @PostMapping("/add")
     public CommonResult add(@RequestBody CrmBanner crmBanner){
@@ -57,7 +57,7 @@ public class BannerAdminController {
         if(!save){
             throw new MyException(20001,"插入失败");
         }
-        return CommonResult.ok().emptyData();
+        return CommonResult.ok();
     }
     @DeleteMapping("/delete/{id}")
     public CommonResult delete(@PathVariable("id")String id){
@@ -65,7 +65,7 @@ public class BannerAdminController {
         if(!remove){
             throw new MyException(20001,"删除失败");
         }
-        return CommonResult.ok().emptyData();
+        return CommonResult.ok();
     }
     @PutMapping("/edit/{id}")
     public CommonResult edit(@RequestBody CrmBanner banner){
@@ -73,7 +73,7 @@ public class BannerAdminController {
         if(!update){
             throw new MyException(20001,"编辑失败");
         }
-        return CommonResult.ok().emptyData();
+        return CommonResult.ok();
     }
 
 }

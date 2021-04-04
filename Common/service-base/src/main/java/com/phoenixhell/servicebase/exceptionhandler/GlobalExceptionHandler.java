@@ -23,12 +23,12 @@ public class GlobalExceptionHandler {
     @ResponseBody
     public CommonResult globalError(Exception e){
         e.printStackTrace();
-        return CommonResult.error().emptyData().data("全局错误",e.getMessage());
+        return CommonResult.error().data("全局错误",e.getMessage());
     }
     @ExceptionHandler(value = MyException.class)
     @ResponseBody
     public CommonResult myException(MyException e){
         log.error(ExceptionUtil.getMessage(e));
-        return CommonResult.error().emptyData().data("customMessage", Arrays.asList(e.getCode(), e.getMsg()));
+        return CommonResult.error().data("customMessage", Arrays.asList(e.getCode(), e.getMsg()));
     }
 }

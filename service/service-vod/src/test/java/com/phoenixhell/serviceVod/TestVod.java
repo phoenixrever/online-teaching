@@ -21,7 +21,7 @@ public class TestVod {
     private InitConfigProperties initConfigProperties;
     private final String VIDEO_ID="7f21772e8e164a63a4207e90c3a8a6e5";
 
-    @Test
+//    @Test
     public void testUpload() {
         String title="47-3.flv";
         String fileName="O:\\末名天N4梦子老师\\47\\47-3.flv";

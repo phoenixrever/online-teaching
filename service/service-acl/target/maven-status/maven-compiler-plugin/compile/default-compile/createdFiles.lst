@@ -1,5 +1,6 @@
 com\phoenixhell\serviceAcl\entity\AclRole.class
 com\phoenixhell\serviceAcl\entity\vo\TreeNode.class
+com\phoenixhell\serviceAcl\mapper\TokenUserDetailsMapper.class
 com\phoenixhell\serviceAcl\mapper\AclRolePermissionMapper.class
 com\phoenixhell\serviceAcl\service\AclRoleService.class
 com\phoenixhell\serviceAcl\ServiceAcl8009.class
@@ -16,6 +17,7 @@ com\phoenixhell\serviceAcl\mapper\AclPermissionMapper.class
 com\phoenixhell\serviceAcl\entity\AclPermission.class
 com\phoenixhell\serviceAcl\entity\AclUserRole.class
 com\phoenixhell\serviceAcl\service\impl\AclRolePermissionServiceImpl.class
+com\phoenixhell\serviceAcl\service\impl\TokenUserDetailsServiceImpl.class
 com\phoenixhell\serviceAcl\controller\AclRolePermissionController.class
 com\phoenixhell\serviceAcl\service\AclUserRoleService.class
 com\phoenixhell\serviceAcl\controller\AclPermissionController.class

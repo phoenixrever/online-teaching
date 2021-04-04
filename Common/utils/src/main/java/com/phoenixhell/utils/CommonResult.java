@@ -1,5 +1,6 @@
 package com.phoenixhell.utils;
 
+import com.baomidou.mybatisplus.extension.api.R;
 import io.swagger.annotations .ApiModelProperty;
 import lombok.Data;
 
@@ -14,10 +15,8 @@ import java.util.Map;
 //统一返回结果
 @Data
 public class CommonResult{
-    private CommonResult() {
-    }
 
-    private static CommonResult commonResult = new CommonResult();
+    private CommonResult(){}
 
     @ApiModelProperty(value = "是否成功")
     private Boolean success;
@@ -30,9 +29,9 @@ public class CommonResult{
 
     @ApiModelProperty(value = "返回数据")
     private Map<String, Object> data = new HashMap<String, Object>();
-    private Map<String, String> stringMapData = new HashMap<String, String>();
 
     public static CommonResult ok() {
+        CommonResult commonResult =new CommonResult();
         commonResult.setSuccess(true);
         commonResult.setCode(StatusCode.SUCCESS);
         commonResult.setMessage("成功");
@@ -40,32 +39,36 @@ public class CommonResult{
     }
 
     public static CommonResult error() {
-        commonResult.setSuccess(false);
+        CommonResult commonResult =new CommonResult();
+        commonResult.setSuccess(true);
         commonResult.setCode(StatusCode.ERROR);
         commonResult.setMessage("失败");
         return commonResult;
     }
-    public static CommonResult error(String message) {
-        commonResult.setSuccess(false);
-        commonResult.setCode(StatusCode.ERROR);
-        commonResult.setMessage(message);
-        return commonResult;
+
+    public CommonResult success(Boolean success){
+        this.setSuccess(success);
+        return this;
     }
-    public CommonResult emptyData(){
-        commonResult.getData().clear();
-        return commonResult;
+
+    public CommonResult message(String message){
+        this.setMessage(message);
+        return this;
     }
-    public static CommonResult data(String key,Object value){
-        commonResult.getData().put(key,value);
-        return commonResult;
+
+    public CommonResult code(Integer code){
+        this.setCode(code);
+        return this;
     }
-    public static CommonResult data(Map<String,Object> map){
-        commonResult.setData(map);
-        return commonResult;
+
+
+    public  CommonResult data(String key,Object value){
+        this.getData().put(key,value);
+        return this;
     }
-    public static CommonResult stringData(Map<String,String> map){
-        commonResult.setStringMapData(map);
-        return commonResult;
+    public  CommonResult data(Map<String,Object> map){
+        this.setData(map);
+        return this;
     }
 
 }

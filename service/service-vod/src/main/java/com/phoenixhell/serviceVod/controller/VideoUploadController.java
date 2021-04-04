@@ -26,8 +26,8 @@ public class VideoUploadController {
         if (file == null) {
             return CommonResult.error();
         }
-        FutureTask<Map<String, String>> mapFutureTask = new FutureTask<>(() -> {
-            Map<String, String> map = videoUploadService.videoStreamUpload(file);
+        FutureTask<Map<String, Object>> mapFutureTask = new FutureTask<>(() -> {
+            Map<String, Object> map = videoUploadService.videoStreamUpload(file);
             return map;
         });
         try {
@@ -35,21 +35,21 @@ public class VideoUploadController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        Map<String, String> map = mapFutureTask.get();
+        Map<String, Object> map = mapFutureTask.get();
         System.out.println("-------------");
         System.out.println(map);
-        return CommonResult.ok().emptyData().stringData(map);
+        return CommonResult.ok().data(map);
     }
     @DeleteMapping("/delete/{videoId}")
     public CommonResult deleteByVideoId(@PathVariable("videoId") String videoId){
         String videoId1 = videoUploadService.deleteByVideoId(videoId);
-        return CommonResult.ok().emptyData().data("videoId",videoId1);
+        return CommonResult.ok().data("videoId",videoId1);
     }
 
     @GetMapping("/uploadProgress")
     public CommonResult uploadProgress() {
-        Map<String, String> percentMap = ProgressBar.getPercentMap();
+        Map<String, Object> percentMap = ProgressBar.getPercentMap();
         System.out.println(percentMap + "****************");
-        return CommonResult.ok().emptyData().stringData(percentMap);
+        return CommonResult.ok().data(percentMap);
     }
 }

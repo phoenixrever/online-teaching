@@ -1,4 +1,4 @@
-com\phoenixhell\utils\JwtUtils.class
+com\phoenixhell\utils\JwtTokenUtil.class
 com\phoenixhell\utils\RandomUtil.class
 com\phoenixhell\utils\StatusCode.class
 com\phoenixhell\utils\ExceptionUtil.class

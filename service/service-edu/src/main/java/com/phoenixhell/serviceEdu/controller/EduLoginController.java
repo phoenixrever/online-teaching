@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.*;
 public class EduLoginController {
     @PostMapping("/login")
     public CommonResult login() {
-        return CommonResult.ok().emptyData().data("token", "admin");
+        return CommonResult.ok().data("token", "admin");
     }
 
     @GetMapping("/info")
     public CommonResult info() {
-        return CommonResult.ok().emptyData().data("name", "admin").data("roles", "[admin]").data("avatar", "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1306508493,2006189766&fm=26&gp=0.jpg");
+        return CommonResult.ok().data("name", "admin").data("roles", "[admin]").data("avatar", "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1306508493,2006189766&fm=26&gp=0.jpg");
     }
 }

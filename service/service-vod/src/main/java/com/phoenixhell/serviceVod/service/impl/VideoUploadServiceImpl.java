@@ -21,12 +21,12 @@ public class VideoUploadServiceImpl implements VideoUploadService {
     private VodServiceConfig vodServiceConfig;
 
     @Override
-    public Map<String, String> videoStreamUpload(MultipartFile file) throws IOException {
+    public Map<String, Object> videoStreamUpload(MultipartFile file) throws IOException {
         String title = file.getOriginalFilename().substring(0, file.getOriginalFilename().lastIndexOf("."));
         String fileName = file.getOriginalFilename();
         UploadStreamResponse response = Vod.UploadStreamVideo(vodServiceConfig.getAccessKeyId(), vodServiceConfig.getAccessKeySecret(), title, fileName, file.getInputStream());
         System.out.print("RequestId=" + response.getRequestId() + "\n");  //请求视频点播服务的请求ID
-        Map<String, String> map = new HashMap<>();
+        Map<String, Object> map = new HashMap<>();
         if (response.isSuccess()) {
             System.out.print("VideoId=" + response.getVideoId() + "\n");
             map.put("VideoId", response.getVideoId());

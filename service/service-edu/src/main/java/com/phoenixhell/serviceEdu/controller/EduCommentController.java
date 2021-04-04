@@ -39,7 +39,7 @@ public class EduCommentController {
         map.put("totalPages", pageInfo.getPages());
         map.put("hasPrevious", pageInfo.hasPrevious());
         map.put("hasNext", pageInfo.hasNext());
-        return CommonResult.ok().emptyData().data("pageInfo",map);
+        return CommonResult.ok().data("pageInfo",map);
     }
     @PostMapping("/add")
     public CommonResult addComment(@RequestBody EduComment eduComment){
@@ -47,7 +47,7 @@ public class EduCommentController {
         if(!save){
             throw  new MyException(20001,"添加评论失败");
         }
-        return CommonResult.ok().emptyData();
+        return CommonResult.ok();
     }
 }
 

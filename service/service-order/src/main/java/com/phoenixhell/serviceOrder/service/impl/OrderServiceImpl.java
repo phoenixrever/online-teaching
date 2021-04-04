@@ -1,6 +1,5 @@
 package com.phoenixhell.serviceOrder.service.impl;
 
-import com.alibaba.fastjson.JSONObject;
 import com.phoenixhell.serviceOrder.appBoot.DelayQueueManager;
 import com.phoenixhell.serviceOrder.entity.Order;
 import com.phoenixhell.serviceOrder.mapper.OrderMapper;
@@ -10,18 +9,14 @@ import com.phoenixhell.serviceOrder.service.OrderService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.phoenixhell.servicebase.exceptionhandler.MyException;
 import com.phoenixhell.utils.CommonResult;
-import com.phoenixhell.utils.JwtUtils;
+import com.phoenixhell.utils.JwtTokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
 
-import javax.servlet.http.HttpServletRequest;
 import java.math.BigDecimal;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.UUID;
-import java.util.concurrent.TimeUnit;
 
 /**
  * <p>

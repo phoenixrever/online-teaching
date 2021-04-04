@@ -38,16 +38,16 @@ public class EduChapterController {
     @GetMapping("/get/{id}")
     public CommonResult getAllChapterByCourseId(@PathVariable("id") String id) {
         List<EduChapter> chapterList = eduChapterService.getChapterById(id);
-        return CommonResult.ok().emptyData().data("chapterList", chapterList);
+        return CommonResult.ok().data("chapterList", chapterList);
     }
 
     //    @PostMapping("/addChapter")
 //    public CommonResult addChapter(@RequestBody EduChapter eduChapter){
 //        boolean save = eduChapterService.save(eduChapter);
 //        if(save){
-//            return CommonResult.ok().emptyData().data("添加章节结果","添加章节成功");
+//            return CommonResult.ok().data("添加章节结果","添加章节成功");
 //        }else{
-//            return CommonResult.error().emptyData().data("添加章节结果","添加章节失败");
+//            return CommonResult.error().data("添加章节结果","添加章节失败");
 //        }
 //    }
     @PostMapping("/addChapterVideos")
@@ -78,19 +78,19 @@ public class EduChapterController {
         if(count<1){
             boolean b = eduChapterService.removeById(id);
             if (b) {
-                return CommonResult.ok().emptyData().data("删除结果", "删除成功");
+                return CommonResult.ok().data("删除结果", "删除成功");
             } else {
                 throw new MyException(20001, "删除失败");
             }
         }else{
-            return CommonResult.error("有子节点不能删除").emptyData();
+            return CommonResult.error().message("有子节点不能删除");
         }
     }
 
     @PutMapping("/edit")
     public CommonResult updateChapterById(@RequestBody EduChapter eduChapter) {
          eduChapterService.updateById(eduChapter);
-        return CommonResult.ok().emptyData().data("修改结果", "修改成功");
+        return CommonResult.ok().data("修改结果", "修改成功");
     }
 }
 

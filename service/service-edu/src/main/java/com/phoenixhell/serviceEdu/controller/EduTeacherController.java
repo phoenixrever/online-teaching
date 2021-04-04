@@ -38,7 +38,7 @@ public class EduTeacherController {
     @ApiOperation(value = "所有讲师列表")
     @GetMapping("/listAll")
     public CommonResult teacherList() {
-        return CommonResult.ok().emptyData().data("teachers", eduTeacherService.list());
+        return CommonResult.ok().data("teachers", eduTeacherService.list());
     }
 
     @ApiOperation(value = "根据ID删除讲师")
@@ -46,9 +46,9 @@ public class EduTeacherController {
     public CommonResult deleteById(@PathVariable("id") String id) {
         boolean remove = eduTeacherService.removeById(id);
         if (remove) {
-            return CommonResult.ok().emptyData().data("删除结果", "删除成功");
+            return CommonResult.ok().data("删除结果", "删除成功");
         } else {
-            return CommonResult.error().emptyData().data("删除结果", "删除失败");
+            return CommonResult.error().data("删除结果", "删除失败");
         }
     }
 
@@ -59,7 +59,7 @@ public class EduTeacherController {
         Map<String, Object> map = new HashMap<>();
         map.put("total", teacherPage.getTotal());
         map.put("items", teacherPage.getRecords());
-        return CommonResult.ok().emptyData().data(map);
+        return CommonResult.ok().data(map);
     }
 
     @ApiOperation(value = "带条件物理分页")
@@ -91,7 +91,7 @@ public class EduTeacherController {
         Map<String, Object> map = new HashMap<>();
         map.put("total", teacherPage.getTotal());
         map.put("items", teacherPage.getRecords());
-        return CommonResult.ok().emptyData().data(map);
+        return CommonResult.ok().data(map);
     }
 
     @ApiOperation(value = "新增讲师")
@@ -100,9 +100,9 @@ public class EduTeacherController {
             @ApiParam(name = "teacher",value = "讲师对象",required = true) @RequestBody EduTeacher eduTeacher) {
         boolean save = eduTeacherService.save(eduTeacher);
         if (save) {
-            return CommonResult.ok().emptyData().data("添加结果", "添加成功");
+            return CommonResult.ok().data("添加结果", "添加成功");
         } else {
-            return CommonResult.error().emptyData().data("添加结果", "添加失败");
+            return CommonResult.error().data("添加结果", "添加失败");
         }
     }
 
@@ -110,7 +110,7 @@ public class EduTeacherController {
     @GetMapping("/getTeacher/{id}")
     public CommonResult getTeacher(@PathVariable("id") String id) {
         EduTeacher eduTeacher = eduTeacherService.getById(id);
-        return CommonResult.ok().emptyData().data("teacher", eduTeacher);
+        return CommonResult.ok().data("teacher", eduTeacher);
     }
 
     @ApiOperation(value = "根据ID 修改讲师")
@@ -119,9 +119,9 @@ public class EduTeacherController {
         eduTeacher.setName(null);
         boolean b = eduTeacherService.updateById(eduTeacher);
         if (b) {
-            return CommonResult.ok().emptyData().data("修改结果", "修改成功");
+            return CommonResult.ok().data("修改结果", "修改成功");
         } else {
-            return CommonResult.error().emptyData().data("修改结果", "修改失败");
+            return CommonResult.error().data("修改结果", "修改失败");
         }
     }
     @ApiOperation(value = "根据name 查詢讲师")
@@ -129,9 +129,9 @@ public class EduTeacherController {
     public CommonResult validateUniqueName(@PathVariable("name") String name) {
         EduTeacher eduTeacher = eduTeacherService.query().eq(true, "name", name).one();
         if (eduTeacher==null) {
-            return CommonResult.ok().emptyData().data("查詢结果", "查詢成功");
+            return CommonResult.ok().data("查詢结果", "查詢成功");
         } else {
-            return CommonResult.error().emptyData().data("查詢结果", "查詢失败");
+            return CommonResult.error().data("查詢结果", "查詢失败");
         }
     }
     //视频里面的写法 实测 post 直接改成put 无任何问题
@@ -141,9 +141,9 @@ public class EduTeacherController {
         eduTeacher.setId(id);
         boolean b = eduTeacherService.updateById(eduTeacher);
         if (b) {
-            return CommonResult.ok().emptyData().data("修改结果", "修改成功");
+            return CommonResult.ok().data("修改结果", "修改成功");
         } else {
-            return CommonResult.error().emptyData().data("修改结果", "修改失败");
+            return CommonResult.error().data("修改结果", "修改失败");
         }
     }*/
 }

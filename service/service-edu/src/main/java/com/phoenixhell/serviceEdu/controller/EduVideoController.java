@@ -54,13 +54,13 @@ public class EduVideoController {
         if (!b) {
             throw new MyException(20001, "事务错误");
         }
-        return CommonResult.ok().emptyData().data("删除结果", "删除成功");
+        return CommonResult.ok().data("删除结果", "删除成功");
     }
 
     @PutMapping("/edit")
     public CommonResult updateVideoById(@RequestBody EduVideo eduVideo) {
         eduVideoService.updateById(eduVideo);
-        return CommonResult.ok().emptyData().data("修改结果", "修改成功");
+        return CommonResult.ok().data("修改结果", "修改成功");
     }
 
     @PostMapping("/add")
@@ -74,7 +74,7 @@ public class EduVideoController {
                 addNumber.getAndIncrement();
             }
         });
-        return CommonResult.ok().emptyData().data("修改结果", addNumber.get() + "条记录");
+        return CommonResult.ok().data("修改结果", addNumber.get() + "条记录");
     }
 }
 

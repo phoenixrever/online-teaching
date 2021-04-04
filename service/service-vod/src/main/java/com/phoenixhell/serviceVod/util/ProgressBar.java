@@ -13,7 +13,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Data
 public class ProgressBar {
     private static ProgressBar progressBar =new ProgressBar();
-    private volatile static Map<String,String> percentMap=new HashMap<>();
+    private volatile static Map<String,Object> percentMap=new HashMap<>();
     private AtomicInteger atomicInteger=new AtomicInteger();
 
     private ProgressBar(){
@@ -22,7 +22,7 @@ public class ProgressBar {
         percentMap.put("admin", "0");
     }
 
-    public static Map<String, String> getPercentMap() {
+    public static Map<String, Object> getPercentMap() {
         return percentMap;
     }
 

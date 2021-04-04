@@ -7,16 +7,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="service-oss" />
         <module name="service-cms" />
         <module name="service-order" />
-        <module name="api-gateway" />
         <module name="service-vod" />
         <module name="service-edu" />
-        <module name="service-ucenter" />
-        <module name="service-acl" />
+        <module name="api-gateway" />
+        <module name="spring-security" />
         <module name="service-base" />
+        <module name="service-ucenter" />
         <module name="utils" />
-        <module name="service-oss" />
+        <module name="service-acl" />
         <module name="service-statistics" />
       </profile>
     </annotationProcessing>
@@ -34,6 +35,7 @@
       <module name="service-statistics" target="1.8" />
       <module name="service-ucenter" target="1.8" />
       <module name="service-vod" target="1.8" />
+      <module name="spring-security" target="1.8" />
       <module name="utils" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -49,6 +51,7 @@
       <module name="service-statistics" options="-parameters" />
       <module name="service-ucenter" options="-parameters" />
       <module name="service-vod" options="-parameters" />
+      <module name="spring-security" options="-parameters" />
       <module name="utils" options="-parameters" />
     </option>
   </component>

@@ -29,26 +29,26 @@ public class UcenterMemberController {
     @PostMapping("/login")
     public CommonResult login(@RequestBody LoginVO loginVO){
         String token=ucenterMemberService.login(loginVO);
-        return CommonResult.ok().emptyData().data("token",token);
+        return CommonResult.ok().data("token",token);
     }
 
     @PostMapping("/register")
     public CommonResult register(@RequestBody RegisterVo registerVo){
         String token=ucenterMemberService.register(registerVo);
-        return CommonResult.ok().emptyData().data("token",token);
+        return CommonResult.ok().data("token",token);
     }
     @GetMapping("/info")
     public CommonResult getUserInfoByToken(HttpServletRequest request){
         UcenterMember user =ucenterMemberService.getUserInfoByToken(request);
         user.setPassword(null);
-        return CommonResult.ok().emptyData().data("user",user);
+        return CommonResult.ok().data("user",user);
     }
 
     @GetMapping("/feignInfo/{userId}")
     public CommonResult getUserInfoByTokenId( @PathVariable String userId){
         UcenterMember userInfo =ucenterMemberService.getUserInfoByTokenId(userId);
         userInfo.setPassword(null);
-        return CommonResult.ok().emptyData().data("userInfo",userInfo);
+        return CommonResult.ok().data("userInfo",userInfo);
     }
 
     @GetMapping("/registerCount/{day}")
