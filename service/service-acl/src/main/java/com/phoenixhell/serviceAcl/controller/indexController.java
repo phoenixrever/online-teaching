@@ -1,5 +1,8 @@
 package com.phoenixhell.serviceAcl.controller;
 
+import com.phoenixhell.serviceAcl.entity.AclPermission;
+import com.phoenixhell.serviceAcl.entity.AclUser;
+import com.phoenixhell.serviceAcl.service.AclUserService;
 import com.phoenixhell.serviceAcl.service.IndexService;
 import com.phoenixhell.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +23,8 @@ public class indexController {
     private IndexService indexService;
     @Autowired
     private RedisTemplate redisTemplate;
+    @Autowired
+    private AclUserService aclUserService;
     @GetMapping("/info")
     public CommonResult info() {
         String username = SecurityContextHolder.getContext().getAuthentication().getName();
@@ -29,8 +34,8 @@ public class indexController {
     @GetMapping("/menu")
     public CommonResult getMenuByUsername(){
         String username = SecurityContextHolder.getContext().getAuthentication().getName();
-        List<String> permissionList = (List<String>) redisTemplate.opsForValue().get(username);
-        System.out.println(permissionList);
-        return CommonResult.ok().data("permissionList",permissionList);
+        AclUser user = aclUserService.query().eq("username", username).one();
+        List<AclPermission> menu = indexService.getMenuByUserId(user.getId());
+        return CommonResult.ok().data("menu",menu);
     }
 }

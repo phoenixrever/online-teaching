@@ -41,8 +41,8 @@ public class TokenUserDetailsServiceImpl implements UserDetailsService {
         User user = new User();
         BeanUtils.copyProperties(aclUser, user);
         SecurityUser securityUser = new SecurityUser(user);
-        List<String> permissionStringListAuthorities = tokenUserDetailsMapper.getPermissionStringListByUserId(aclUser.getId());
-        securityUser.setPermissionList(permissionStringListAuthorities);
+        List<String> permissionValueStringListAuthorities = tokenUserDetailsMapper.getPermissionValueListByUserId(aclUser.getId());
+        securityUser.setPermissionList(permissionValueStringListAuthorities);
         return securityUser;
     }
 }

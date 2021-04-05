@@ -1,9 +1,9 @@
 package com.phoenixhell.serviceAcl.service.impl;
 
-import com.alibaba.fastjson.JSONObject;
 import com.phoenixhell.serviceAcl.entity.AclPermission;
 import com.phoenixhell.serviceAcl.entity.AclUser;
 import com.phoenixhell.serviceAcl.entity.AclUserRole;
+import com.phoenixhell.serviceAcl.mapper.TokenUserDetailsMapper;
 import com.phoenixhell.serviceAcl.service.AclRoleService;
 import com.phoenixhell.serviceAcl.service.AclUserRoleService;
 import com.phoenixhell.serviceAcl.service.AclUserService;
@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
+import java.security.Permission;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -28,7 +29,8 @@ public class IndexServiceImpl implements IndexService {
     private AclUserRoleService aclUserRoleService;
     @Autowired
     private RedisTemplate redisTemplate;
-
+    @Autowired
+    private TokenUserDetailsMapper tokenUserDetailsMapper;
     @Override
     public Map getUserInfoByName(String username) {
         Map map = new HashMap();
@@ -42,21 +44,23 @@ public class IndexServiceImpl implements IndexService {
         if (userRoles.size() == 0) {
             roleList.add("");
         } else {
-            for (AclUserRole r : userRoles) {
-                String roleName = aclRoleService.getById(r.getId()).getRoleName();
+            for (AclUserRole ur : userRoles) {
+                String roleName = aclRoleService.getById(ur.getRoleId()).getRoleName();
                 roleList.add(roleName);
             }
         }
         map.put("roles", roleList);
-//        List<String> list = (List<String>) redisTemplate.opsForValue().get(username);
-//        map.put("permissions", list);
+        List<String> permissionValueList = (List<String>) redisTemplate.opsForValue().get(username);
+        map.put("permissions", permissionValueList);
         map.put("avatar", "https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif");
 
         return map;
     }
-//
-//    @Override
-//    public List<JSONObject> getMenuByUserId(String userId) {
-//        return null;
-//    }
+
+    @Override
+    public List<AclPermission> getMenuByUserId(String userId) {
+        List<AclPermission> permissionList = tokenUserDetailsMapper.getPermissionListByUserId(userId);
+        return permissionList;
+    }
+
 }
