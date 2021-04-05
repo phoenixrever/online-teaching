@@ -1,5 +1,6 @@
 package com.phoenixhell.serviceAcl.service.impl;
 
+import com.alibaba.fastjson.JSONObject;
 import com.phoenixhell.serviceAcl.entity.AclPermission;
 import com.phoenixhell.serviceAcl.entity.AclUser;
 import com.phoenixhell.serviceAcl.entity.AclUserRole;
@@ -53,4 +54,9 @@ public class IndexServiceImpl implements IndexService {
 
         return map;
     }
+//
+//    @Override
+//    public List<JSONObject> getMenuByUserId(String userId) {
+//        return null;
+//    }
 }
