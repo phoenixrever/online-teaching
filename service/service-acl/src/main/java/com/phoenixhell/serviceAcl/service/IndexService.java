@@ -8,5 +8,5 @@ import java.util.Map;
 
 public interface IndexService {
     Map getUserInfoByName(String username);
-    List<AclPermission> getMenuByUserId(String userId);
+    List<AclPermission> getPermissionListByUserId(String userId);
 }

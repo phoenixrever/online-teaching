@@ -1,5 +1,5 @@
-E:\online-teaching\service\api-gateway\src\main\java\com\phoenixhell\gateway\handler\ErrorHandlerConfig.java
-E:\online-teaching\service\api-gateway\src\main\java\com\phoenixhell\gateway\filter\AuthGlobalFilter.java
-E:\online-teaching\service\api-gateway\src\main\java\com\phoenixhell\gateway\ApiGateway9527.java
-E:\online-teaching\service\api-gateway\src\main\java\com\phoenixhell\gateway\handler\JsonExceptionHandler.java
-E:\online-teaching\service\api-gateway\src\main\java\com\phoenixhell\gateway\config\CorsConfig.java
+E:\online-teaching\api-gateway\src\main\java\com\phoenixhell\gateway\ApiGateway9527.java
+E:\online-teaching\api-gateway\src\main\java\com\phoenixhell\gateway\filter\AuthGlobalFilter.java
+E:\online-teaching\api-gateway\src\main\java\com\phoenixhell\gateway\handler\JsonExceptionHandler.java
+E:\online-teaching\api-gateway\src\main\java\com\phoenixhell\gateway\handler\ErrorHandlerConfig.java
+E:\online-teaching\api-gateway\src\main\java\com\phoenixhell\gateway\config\CorsConfig.java

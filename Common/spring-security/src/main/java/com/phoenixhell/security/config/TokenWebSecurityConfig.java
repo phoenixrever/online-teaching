@@ -50,7 +50,7 @@ public class TokenWebSecurityConfig extends WebSecurityConfigurerAdapter {
     //ignore 不用认证可以反问的路径
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/api/**",
+        web.ignoring().antMatchers("/api/**","/**",
                 "/swagger-resources/**", "/webjars/**", "/v2/**", "/swagger-ui.html/**"
         );
     }

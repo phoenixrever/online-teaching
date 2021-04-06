@@ -1,7 +1,7 @@
-N:\Git\online-teaching\service\service-statistics\src\main\java\com\phoenixhell\serviceStatistics\service\impl\StatisticsDailyServiceImpl.java
-N:\Git\online-teaching\service\service-statistics\src\main\java\com\phoenixhell\serviceStatistics\service\StatisticsDailyService.java
-N:\Git\online-teaching\service\service-statistics\src\main\java\com\phoenixhell\serviceStatistics\ServiceStatistics8008.java
-N:\Git\online-teaching\service\service-statistics\src\main\java\com\phoenixhell\serviceStatistics\entity\StatisticsDaily.java
-N:\Git\online-teaching\service\service-statistics\src\main\java\com\phoenixhell\serviceStatistics\mapper\StatisticsDailyMapper.java
-N:\Git\online-teaching\service\service-statistics\src\main\java\com\phoenixhell\serviceStatistics\controller\StatisticsDailyController.java
-N:\Git\online-teaching\service\service-statistics\src\main\java\com\phoenixhell\serviceStatistics\service\FeignUcenterService.java
+E:\online-teaching\service\service-statistics\src\main\java\com\phoenixhell\serviceStatistics\service\StatisticsDailyService.java
+E:\online-teaching\service\service-statistics\src\main\java\com\phoenixhell\serviceStatistics\controller\StatisticsDailyController.java
+E:\online-teaching\service\service-statistics\src\main\java\com\phoenixhell\serviceStatistics\service\FeignUcenterService.java
+E:\online-teaching\service\service-statistics\src\main\java\com\phoenixhell\serviceStatistics\service\impl\StatisticsDailyServiceImpl.java
+E:\online-teaching\service\service-statistics\src\main\java\com\phoenixhell\serviceStatistics\entity\StatisticsDaily.java
+E:\online-teaching\service\service-statistics\src\main\java\com\phoenixhell\serviceStatistics\mapper\StatisticsDailyMapper.java
+E:\online-teaching\service\service-statistics\src\main\java\com\phoenixhell\serviceStatistics\ServiceStatistics8008.java

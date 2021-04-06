@@ -51,14 +51,14 @@ public class IndexServiceImpl implements IndexService {
         }
         map.put("roles", roleList);
         List<String> permissionValueList = (List<String>) redisTemplate.opsForValue().get(username);
-        map.put("permissions", permissionValueList);
+        map.put("permissionList", permissionValueList);
         map.put("avatar", "https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif");
 
         return map;
     }
 
     @Override
-    public List<AclPermission> getMenuByUserId(String userId) {
+    public List<AclPermission> getPermissionListByUserId(String userId) {
         List<AclPermission> permissionList = tokenUserDetailsMapper.getPermissionListByUserId(userId);
         return permissionList;
     }

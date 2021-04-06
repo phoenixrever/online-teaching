@@ -35,7 +35,7 @@ public class indexController {
     public CommonResult getMenuByUsername(){
         String username = SecurityContextHolder.getContext().getAuthentication().getName();
         AclUser user = aclUserService.query().eq("username", username).one();
-        List<AclPermission> menu = indexService.getMenuByUserId(user.getId());
-        return CommonResult.ok().data("menu",menu);
+        List<AclPermission> permissionList = indexService.getPermissionListByUserId(user.getId());
+        return CommonResult.ok().data("permissionList",permissionList);
     }
 }
