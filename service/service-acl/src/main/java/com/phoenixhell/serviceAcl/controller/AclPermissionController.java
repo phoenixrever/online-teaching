@@ -35,6 +35,7 @@ public class AclPermissionController {
     private AclPermissionService aclPermissionService;
     @Autowired
     private TokenUserDetailsMapper tokenUserDetailsMapper;
+
     @GetMapping("/listAll")
     public List<TreeNode> getList() {
         List<AclPermission> list = aclPermissionService.list();
@@ -46,6 +47,7 @@ public class AclPermissionController {
         System.out.println(oneSubjectList);
         return oneSubjectList;
     }
+
     @GetMapping("/listAll3/{id}")
     public List<MenuVo> getList3(@PathVariable String id) {
         List<AclPermission> list = tokenUserDetailsMapper.getPermissionListByUserId(id);
@@ -58,6 +60,7 @@ public class AclPermissionController {
         System.out.println(oneSubjectList);
         return oneSubjectList;
     }
+
     //方法1
     private void getSubjectList3(List<AclPermission> permissionList, List<MenuVo> oneSubjectList) {
         for (MenuVo oneSubject : oneSubjectList) {
@@ -67,15 +70,23 @@ public class AclPermissionController {
                     subList.add(menuVo(permission));
                 }
             }
+            String redirectPath = null;
             oneSubject.setChildren(subList);//所有二级
-            oneSubject.setRedirect(oneSubject.getPath()+"/"+oneSubject.getChildren().get(0).getPath());
+            if (!StringUtils.isEmpty(oneSubject.getPath()) && oneSubject.getChildren().size() != 0) {
+                redirectPath = oneSubject.getPath() + "/" + oneSubject.getChildren().get(0).getPath();
+            } else {
+                redirectPath = "noredirect";
+            }
+            System.out.println(redirectPath);
+            oneSubject.setRedirect(redirectPath);
             HashMap<String, String> map = new HashMap<>();
-            map.put("title",oneSubject.getName());
-            map.put("icon",oneSubject.getIcon());
+            map.put("title", oneSubject.getName());
+            map.put("icon", oneSubject.getIcon());
             oneSubject.setMeta(map);
             getSubjectList3(permissionList, subList);
         }
     }
+
     //方法1
     private void getSubjectList(List<AclPermission> permissionList, List<TreeNode> oneSubjectList) {
         for (TreeNode oneSubject : oneSubjectList) {
@@ -91,8 +102,6 @@ public class AclPermissionController {
     }
 
 
-
-
     //方法2
     @GetMapping("/listAll2")
     public List<TreeNode> getList2() {
@@ -102,7 +111,7 @@ public class AclPermissionController {
                 .map(y -> permissionVo(y))
                 .collect(Collectors.toList());
         TreeNode treeNode = oneSubjectList.get(0);
-       oneSubjectList.add(getSubjectList2(list, treeNode));
+        oneSubjectList.add(getSubjectList2(list, treeNode));
         System.out.println(oneSubjectList);
         return oneSubjectList;
     }
@@ -125,15 +134,16 @@ public class AclPermissionController {
     private TreeNode permissionVo(AclPermission permission) {
 //        return new TreeNode(permission.getId(), permission.getPid(), permission.getName());
         TreeNode treeNode = new TreeNode();
-        BeanUtils.copyProperties(permission,treeNode );
+        BeanUtils.copyProperties(permission, treeNode);
         return treeNode;
     }
+
     private MenuVo menuVo(AclPermission permission) {
 //        return new TreeNode(permission.getId(), permission.getPid(), permission.getName());
         MenuVo menuVo = new MenuVo();
-        BeanUtils.copyProperties(permission,menuVo );
-        if(!StringUtils.isEmpty(permission.getPath())){
-            if(permission.getPath().contains("id")){
+        BeanUtils.copyProperties(permission, menuVo);
+        if (!StringUtils.isEmpty(permission.getPath())) {
+            if (permission.getPath().contains("id")) {
                 menuVo.setHidden(true);
             }
         }

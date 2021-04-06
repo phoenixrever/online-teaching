@@ -18,6 +18,6 @@ public class MenuVo {
     private String name;
     private Map<String,String> meta;
     private String icon;
-    private Boolean hidden;
+    private Boolean hidden=false;
     private List<MenuVo> children;
 }

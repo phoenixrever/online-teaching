@@ -6,118 +6,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="386e7ef7-476a-454e-860b-396192b5d42d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api-gateway/target/classes/com/phoenixhell/gateway/ApiGateway9527.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/target/classes/com/phoenixhell/gateway/config/CorsConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/target/classes/com/phoenixhell/gateway/filter/AuthGlobalFilter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/target/classes/com/phoenixhell/gateway/handler/ErrorHandlerConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/target/classes/com/phoenixhell/gateway/handler/JsonExceptionHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/ServiceAcl8009.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/controller/AclPermissionController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/controller/AclRoleController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/controller/AclRolePermissionController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/controller/AclUserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/controller/AclUserRoleController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/entity/AclPermission.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/entity/AclRole.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/entity/AclRolePermission.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/entity/AclUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/entity/AclUserRole.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/entity/vo/TreeNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/mapper/AclPermissionMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/mapper/AclRoleMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/mapper/AclRolePermissionMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/mapper/AclUserMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/mapper/AclUserRoleMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/service/AclPermissionService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/service/AclRolePermissionService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/service/AclRoleService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/service/AclUserRoleService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/service/AclUserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/service/impl/AclPermissionServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/service/impl/AclRolePermissionServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/service/impl/AclRoleServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/service/impl/AclUserRoleServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/service/impl/AclUserServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/test-classes/com/phoenixhell/serviceAcl/CodeGenerator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-cms/target/classes/com/phoenixhell/serviceCms/controller/BannerAdminController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-cms/target/classes/com/phoenixhell/serviceCms/controller/BannerFrontController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-cms/target/classes/com/phoenixhell/serviceCms/entity/CrmBanner.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-cms/target/classes/com/phoenixhell/serviceCms/mapper/CrmBannerMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-cms/target/classes/com/phoenixhell/serviceCms/service/CrmBannerService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-cms/target/classes/com/phoenixhell/serviceCms/service/FeignService/EduCourseFeignService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-cms/target/classes/com/phoenixhell/serviceCms/service/impl/CrmBannerServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-cms/target/classes/com/phoenixhell/serviceCms/serviceCms8004.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-cms/target/test-classes/com/phoenixhell/serviceCms/CodeGenerator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/phoenixhell/serviceOrder/ServiceOrder8007.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/phoenixhell/serviceOrder/appBoot/DelayQueueManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/phoenixhell/serviceOrder/controller/OrderController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/phoenixhell/serviceOrder/controller/PayLogController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/phoenixhell/serviceOrder/entity/Order.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/phoenixhell/serviceOrder/entity/PayLog.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/phoenixhell/serviceOrder/mapper/OrderMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/phoenixhell/serviceOrder/mapper/PayLogMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/phoenixhell/serviceOrder/service/FeignCourseService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/phoenixhell/serviceOrder/service/FeignUcenterService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/phoenixhell/serviceOrder/service/OrderService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/phoenixhell/serviceOrder/service/PayLogService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/phoenixhell/serviceOrder/service/impl/OrderServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/phoenixhell/serviceOrder/service/impl/PayLogServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/phoenixhell/serviceOrder/utils/HttpClient$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/phoenixhell/serviceOrder/utils/HttpClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/target/test-classes/com/phoenixhell/serviceOrder/CodeGenerator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-statistics/target/classes/com/phoenixhell/serviceStatistics/ServiceStatistics8008.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-statistics/target/classes/com/phoenixhell/serviceStatistics/controller/StatisticsDailyController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-statistics/target/classes/com/phoenixhell/serviceStatistics/entity/StatisticsDaily.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-statistics/target/classes/com/phoenixhell/serviceStatistics/mapper/StatisticsDailyMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-statistics/target/classes/com/phoenixhell/serviceStatistics/service/FeignUcenterService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-statistics/target/classes/com/phoenixhell/serviceStatistics/service/StatisticsDailyService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-statistics/target/classes/com/phoenixhell/serviceStatistics/service/impl/StatisticsDailyServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-statistics/target/test-classes/com/phoenixhell/serviceStatistics/CodeGenerator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-ucenter/target/classes/com/phoenixhell/serviceUcenter/ServiceUcenter8006.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-ucenter/target/classes/com/phoenixhell/serviceUcenter/controller/UcenterMemberController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-ucenter/target/classes/com/phoenixhell/serviceUcenter/controller/WxController$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-ucenter/target/classes/com/phoenixhell/serviceUcenter/controller/WxController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-ucenter/target/classes/com/phoenixhell/serviceUcenter/entity/UcenterMember.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-ucenter/target/classes/com/phoenixhell/serviceUcenter/entity/WxProperties.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-ucenter/target/classes/com/phoenixhell/serviceUcenter/entity/vo/LoginVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-ucenter/target/classes/com/phoenixhell/serviceUcenter/entity/vo/RegisterVo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-ucenter/target/classes/com/phoenixhell/serviceUcenter/mapper/UcenterMemberMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-ucenter/target/classes/com/phoenixhell/serviceUcenter/service/UcenterMemberService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-ucenter/target/classes/com/phoenixhell/serviceUcenter/service/impl/UcenterMemberServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-ucenter/target/classes/com/phoenixhell/serviceUcenter/utils/HttpClientUtils$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-ucenter/target/classes/com/phoenixhell/serviceUcenter/utils/HttpClientUtils$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-ucenter/target/classes/com/phoenixhell/serviceUcenter/utils/HttpClientUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-ucenter/target/test-classes/com/phoenixhell/serviceUcenter/CodeGenerator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-ucenter/target/test-classes/com/phoenixhell/serviceUcenter/TestDoubleToInteger.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-vod/target/classes/com/phoenixhell/serviceVod/Config/VodServiceConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-vod/target/classes/com/phoenixhell/serviceVod/Listener/ProgressListener$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-vod/target/classes/com/phoenixhell/serviceVod/Listener/ProgressListener.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-vod/target/classes/com/phoenixhell/serviceVod/ServiceVod8003.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-vod/target/classes/com/phoenixhell/serviceVod/controller/VideoUploadController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-vod/target/classes/com/phoenixhell/serviceVod/controller/VodPlayController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-vod/target/classes/com/phoenixhell/serviceVod/service/VideoUploadService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-vod/target/classes/com/phoenixhell/serviceVod/service/impl/VideoUploadServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-vod/target/classes/com/phoenixhell/serviceVod/util/ProgressBar.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-vod/target/classes/com/phoenixhell/serviceVod/util/Vod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/spring-security/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/spring-security/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/utils/MenuHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/utils/MenuHelper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/spring-security/src/main/java/com/phoenixhell/security/config/TokenWebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/spring-security/src/main/java/com/phoenixhell/security/config/TokenWebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/spring-security/target/classes/com/phoenixhell/security/config/TokenWebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/Common/spring-security/target/classes/com/phoenixhell/security/config/TokenWebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/utils/target/classes/META-INF/utils.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/spring-security/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Common/spring-security/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/spring-security/target/spring-security-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Common/spring-security/target/spring-security-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/controller/AclPermissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/controller/AclPermissionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/controller/indexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/controller/indexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/mapper/TokenUserDetailsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/mapper/TokenUserDetailsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/service/IndexService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/service/IndexService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/service/impl/IndexServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/service/impl/IndexServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/service/impl/TokenUserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/service/impl/TokenUserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/entity/vo/MenuVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/entity/vo/MenuVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/resources/mapper/TokenUserDetailsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/resources/mapper/TokenUserDetailsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-acl/target/classes/META-INF/service-acl.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-acl/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/controller/AclPermissionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/controller/AclPermissionController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/controller/indexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/controller/indexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/mapper/TokenUserDetailsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/mapper/TokenUserDetailsMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/service/IndexService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/service/IndexService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/service/impl/IndexServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/service/impl/IndexServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/service/impl/TokenUserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/service/impl/TokenUserDetailsServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-acl/target/classes/mapper/TokenUserDetailsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/target/classes/mapper/TokenUserDetailsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/entity/vo/MenuVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/entity/vo/MenuVo.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -199,7 +104,7 @@
     <property name="project.structure.proportion" value="0.15332031" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -356,17 +261,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@fdb434bf" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@761c5b1c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@fdb434bf" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@42a397d0" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@fdb434bf" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@aefb52c9" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@761c5b1c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@9cf6c326" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -408,7 +308,8 @@
       <workItem from="1617623923051" duration="348000" />
       <workItem from="1617624345924" duration="363000" />
       <workItem from="1617624728254" duration="632000" />
-      <workItem from="1617625417780" duration="7769000" />
+      <workItem from="1617625417780" duration="7812000" />
+      <workItem from="1617708815809" duration="7952000" />
     </task>
     <task id="LOCAL-00002" summary="2021-03-26 17:53">
       <created>1616712776290</created>
@@ -445,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617546727732</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="2021-04-05 22:53 どこでもいい">
+      <created>1617634201091</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1617634201091</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,7 +435,8 @@
     <MESSAGE value="2021-03-28 22:53" />
     <MESSAGE value="2021-03-30 22:53" />
     <MESSAGE value="2021-04-4 22:53 どこでもいい" />
-    <option name="LAST_COMMIT_MESSAGE" value="2021-04-4 22:53 どこでもいい" />
+    <MESSAGE value="2021-04-05 22:53 どこでもいい" />
+    <option name="LAST_COMMIT_MESSAGE" value="2021-04-05 22:53 どこでもいい" />
   </component>
   <component name="WindowStateProjectService">
     <state x="254" y="84" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616118172708">
