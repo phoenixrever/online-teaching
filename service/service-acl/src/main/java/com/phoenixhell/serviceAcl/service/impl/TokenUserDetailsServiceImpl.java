@@ -36,7 +36,8 @@ public class TokenUserDetailsServiceImpl implements UserDetailsService {
         AclUser aclUser = aclUserService.query().eq("username", username).one();
         // 判断用户是否存在
         if (null == aclUser){
-            throw new UsernameNotFoundException("用户名不存在！");
+//            throw new UsernameNotFoundException("用户名不存在！");
+            return null; //由springsecurity 统一抛出异常
         }
         User user = new User();
         BeanUtils.copyProperties(aclUser, user);

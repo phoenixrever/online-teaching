@@ -17,6 +17,7 @@ com\phoenixhell\serviceAcl\entity\AclUser.class
 com\phoenixhell\serviceAcl\mapper\AclPermissionMapper.class
 com\phoenixhell\serviceAcl\controller\indexController.class
 com\phoenixhell\serviceAcl\entity\AclPermission.class
+com\phoenixhell\serviceAcl\utils\MenuHelper.class
 com\phoenixhell\serviceAcl\entity\AclUserRole.class
 com\phoenixhell\serviceAcl\service\impl\AclRolePermissionServiceImpl.class
 com\phoenixhell\serviceAcl\service\impl\TokenUserDetailsServiceImpl.class

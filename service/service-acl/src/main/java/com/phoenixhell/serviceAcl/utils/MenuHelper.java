@@ -6,6 +6,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
@@ -19,13 +20,13 @@ public class MenuHelper {
                 }
             }
             String redirectPath = null;
+            Collections.sort(subList);
             oneSubject.setChildren(subList);//所有二级
             if (!StringUtils.isEmpty(oneSubject.getPath()) && oneSubject.getChildren().size() != 0) {
                 redirectPath = oneSubject.getPath() + "/" + oneSubject.getChildren().get(0).getPath();
             } else {
-                redirectPath = "noredirect";
+                redirectPath = null;
             }
-            System.out.println(redirectPath);
             oneSubject.setRedirect(redirectPath);
             HashMap<String, String> map = new HashMap<>();
             map.put("title", oneSubject.getName());
@@ -40,7 +41,8 @@ public class MenuHelper {
         BeanUtils.copyProperties(permission, menuVo);
 //        menuVo.setName(permission.getName()+permission.getId());
         if (!StringUtils.isEmpty(permission.getPath())) {
-            if (permission.getPath().contains("id")) {
+//            if (permission.getPath().contains("id")) {
+            if (permission.getType()==2) {
                 menuVo.setHidden(true);
             }
         }

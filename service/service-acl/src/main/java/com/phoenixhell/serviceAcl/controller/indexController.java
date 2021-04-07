@@ -11,14 +11,12 @@ import com.phoenixhell.utils.CommonResult;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @RestController
@@ -55,7 +53,6 @@ public class indexController {
                 .map(y -> MenuHelper.menuVo(y))
                 .collect(Collectors.toList());
         MenuHelper.getSubjectList(list, oneSubjectList);
-        System.out.println(oneSubjectList);
         return CommonResult.ok().data("permissionList",oneSubjectList);
     }
 

@@ -16,6 +16,7 @@ E:\online-teaching\service\service-acl\src\main\java\com\phoenixhell\serviceAcl\
 E:\online-teaching\service\service-acl\src\main\java\com\phoenixhell\serviceAcl\mapper\AclRoleMapper.java
 E:\online-teaching\service\service-acl\src\main\java\com\phoenixhell\serviceAcl\entity\AclRole.java
 E:\online-teaching\service\service-acl\src\main\java\com\phoenixhell\serviceAcl\mapper\AclPermissionMapper.java
+E:\online-teaching\service\service-acl\src\main\java\com\phoenixhell\serviceAcl\utils\MenuHelper.java
 E:\online-teaching\service\service-acl\src\main\java\com\phoenixhell\serviceAcl\service\IndexService.java
 E:\online-teaching\service\service-acl\src\main\java\com\phoenixhell\serviceAcl\mapper\TokenUserDetailsMapper.java
 E:\online-teaching\service\service-acl\src\main\java\com\phoenixhell\serviceAcl\service\AclPermissionService.java

@@ -37,6 +37,9 @@ public class AclPermission implements Serializable {
     @ApiModelProperty(value = "类型(1:菜单,2:按钮)")
     private Integer type;
 
+    @ApiModelProperty(value = "排序")
+    private Integer sort;
+
     @ApiModelProperty(value = "权限值")
     private String permissionValue;
 
