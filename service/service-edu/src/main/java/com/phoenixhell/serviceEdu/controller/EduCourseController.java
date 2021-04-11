@@ -34,7 +34,6 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/serviceEdu/eduCourse")
-@CrossOrigin
 public class EduCourseController {
     @Autowired
     private EduCourseService eduCourseService;
@@ -125,7 +124,8 @@ public class EduCourseController {
         wrapper.like(!StringUtils.isEmpty(completeCourseInfo.getTeacherName()), "et.name", completeCourseInfo.getTeacherName());
         wrapper.eq(!StringUtils.isEmpty(completeCourseInfo.getStatus()), "ec.status",completeCourseInfo.getStatus());
         wrapper.orderByDesc("ec.gmt_create");
-        wrapper.eq("is_deleted",0);
+        wrapper.eq("ec.is_deleted",0);
+        wrapper.eq("et.is_deleted",0);
         Page<CompleteCourseInfo> completeCoursePage = eduCourseService.getCompleteCoursePage(new Page<>(currentPage, limit), wrapper);
         Map<String, Object> map = new HashMap<>();
         map.put("total", completeCoursePage.getTotal());

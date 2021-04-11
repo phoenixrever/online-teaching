@@ -70,15 +70,15 @@ public class AclPermissionController {
                     subList.add(menuVo(permission));
                 }
             }
-            String redirectPath = null;
+//            String redirectPath = null;
             oneSubject.setChildren(subList);//所有二级
-            if (!StringUtils.isEmpty(oneSubject.getPath()) && oneSubject.getChildren().size() != 0) {
-                redirectPath = oneSubject.getPath() + "/" + oneSubject.getChildren().get(0).getPath();
-            } else {
-                redirectPath = "noredirect";
-            }
-            System.out.println(redirectPath);
-            oneSubject.setRedirect(redirectPath);
+//            if (!StringUtils.isEmpty(oneSubject.getPath()) && oneSubject.getChildren().size() != 0) {
+//                redirectPath =oneSubject.getRedirect()+ "/"+oneSubject.getPath() + "/" + oneSubject.getChildren().get(0).getPath();
+//            } else {
+//                redirectPath = "noredirect";
+//            }
+//            System.out.println(redirectPath);
+//            oneSubject.setRedirect(redirectPath);
             HashMap<String, String> map = new HashMap<>();
             map.put("title", oneSubject.getName());
             map.put("icon", oneSubject.getIcon());
@@ -144,7 +144,7 @@ public class AclPermissionController {
         BeanUtils.copyProperties(permission, menuVo);
         if (!StringUtils.isEmpty(permission.getPath())) {
             if (permission.getPath().contains("id")) {
-                menuVo.setHidden(true);
+//                menuVo.setHidden(true);
             }
         }
         return menuVo;

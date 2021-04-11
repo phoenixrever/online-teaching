@@ -46,6 +46,9 @@ public class AclPermission implements Serializable {
     @ApiModelProperty(value = "访问路径")
     private String path;
 
+    @ApiModelProperty(value = "跳转")
+    private String redirect;
+
     @ApiModelProperty(value = "组件路径")
     private String component;
 

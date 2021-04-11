@@ -25,7 +25,6 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/serviceEdu/eduComment")
-@CrossOrigin
 public class EduCommentController {
     @Autowired
     private EduCommentService eduCommentService;

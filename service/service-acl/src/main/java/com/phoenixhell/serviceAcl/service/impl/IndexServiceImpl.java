@@ -38,6 +38,7 @@ public class IndexServiceImpl implements IndexService {
         if (null == user) {
             throw new MyException(20001, "没有此用户");
         }
+        map.put("id",user.getId());
         map.put("name",user.getUsername());
         List<AclUserRole> userRoles = aclUserRoleService.query().eq("user_id", user.getId()).list();
         ArrayList<String> roleList = new ArrayList<>();

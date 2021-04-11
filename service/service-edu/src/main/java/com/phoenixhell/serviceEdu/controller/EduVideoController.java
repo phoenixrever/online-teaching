@@ -25,7 +25,6 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 @RestController
 @RequestMapping("/serviceEdu/eduVideo")
-@CrossOrigin
 public class EduVideoController {
     @Autowired
     private EduVideoService eduVideoService;

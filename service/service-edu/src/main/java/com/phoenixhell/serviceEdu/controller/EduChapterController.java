@@ -28,7 +28,6 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/serviceEdu/eduChapter")
-@CrossOrigin
 public class EduChapterController {
     @Autowired
     private EduChapterService eduChapterService;

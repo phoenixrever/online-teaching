@@ -19,15 +19,8 @@ public class MenuHelper {
                     subList.add(menuVo(permission));
                 }
             }
-            String redirectPath = null;
             Collections.sort(subList);
             oneSubject.setChildren(subList);//所有二级
-            if (!StringUtils.isEmpty(oneSubject.getPath()) && oneSubject.getChildren().size() != 0) {
-                redirectPath = oneSubject.getPath() + "/" + oneSubject.getChildren().get(0).getPath();
-            } else {
-                redirectPath = null;
-            }
-            oneSubject.setRedirect(redirectPath);
             HashMap<String, String> map = new HashMap<>();
             map.put("title", oneSubject.getName());
             map.put("icon", oneSubject.getIcon());

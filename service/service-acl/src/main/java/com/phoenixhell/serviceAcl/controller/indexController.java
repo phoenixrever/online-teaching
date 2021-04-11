@@ -44,8 +44,11 @@ public class indexController {
 //        return CommonResult.ok().data("permissionList",permissionList);
 //    }
 
-    @GetMapping("/menu/{id}")
-    public CommonResult getMenu(@PathVariable String id) {
+    @GetMapping("/menu")
+    public CommonResult getMenu() {
+        String username = SecurityContextHolder.getContext().getAuthentication().getName();
+        Map userInfo = indexService.getUserInfoByName(username);
+        String id = (String) userInfo.get("id");
         List<AclPermission> list = tokenUserDetailsMapper.getPermissionListByUserId(id);
         System.out.println(list);
         List<MenuVo> oneSubjectList = list.stream().
