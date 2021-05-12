@@ -6,23 +6,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="386e7ef7-476a-454e-860b-396192b5d42d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Common/spring-security/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/spring-security/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/utils/MenuHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/utils/MenuHelper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/spring-security/src/main/java/com/phoenixhell/security/config/TokenWebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/spring-security/src/main/java/com/phoenixhell/security/config/TokenWebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/spring-security/target/classes/com/phoenixhell/security/config/TokenWebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/Common/spring-security/target/classes/com/phoenixhell/security/config/TokenWebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/spring-security/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Common/spring-security/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/spring-security/target/spring-security-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Common/spring-security/target/spring-security-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/controller/AclPermissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/controller/AclPermissionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/controller/indexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/controller/indexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/entity/AclPermission.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/entity/AclPermission.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/entity/vo/MenuVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/entity/vo/MenuVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/utils/MenuHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/phoenixhell/serviceAcl/utils/MenuHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-acl/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/target/classes/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/controller/AclPermissionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/controller/AclPermissionController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/controller/indexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/controller/indexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/entity/AclPermission.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/entity/AclPermission.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/entity/vo/MenuVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/entity/vo/MenuVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/utils/MenuHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/target/classes/com/phoenixhell/serviceAcl/utils/MenuHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-edu/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-edu/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-edu/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-edu/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-edu/target/classes/com/phoenixhell/serviceEdu/controller/EduChapterController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-edu/target/classes/com/phoenixhell/serviceEdu/controller/EduChapterController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-edu/target/classes/com/phoenixhell/serviceEdu/controller/EduChapterController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-edu/target/classes/com/phoenixhell/serviceEdu/controller/EduChapterController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-edu/target/classes/com/phoenixhell/serviceEdu/controller/EduChapterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-edu/target/classes/com/phoenixhell/serviceEdu/controller/EduChapterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-edu/target/classes/com/phoenixhell/serviceEdu/controller/EduCommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-edu/target/classes/com/phoenixhell/serviceEdu/controller/EduCommentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-edu/target/classes/com/phoenixhell/serviceEdu/controller/EduSubjectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-edu/target/classes/com/phoenixhell/serviceEdu/controller/EduSubjectController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-edu/target/classes/com/phoenixhell/serviceEdu/controller/EduTeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-edu/target/classes/com/phoenixhell/serviceEdu/controller/EduTeacherController.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +102,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15332031" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -246,8 +248,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ServiceAcl8009" />
-        <item itemvalue="Spring Boot.ApiGateway9527" />
         <item itemvalue="Spring Boot.ServiceEdu8001" />
+        <item itemvalue="Spring Boot.ApiGateway9527" />
         <item itemvalue="Spring Boot.ServiceStatistics8008" />
         <item itemvalue="Spring Boot.ServiceUcenter8006" />
       </list>
@@ -261,12 +263,17 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@761c5b1c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@25b35445" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@761c5b1c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@9cf6c326" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@25b35445" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@13d41e50" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@25b35445" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6c60910d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -309,7 +316,17 @@
       <workItem from="1617624345924" duration="363000" />
       <workItem from="1617624728254" duration="632000" />
       <workItem from="1617625417780" duration="7812000" />
-      <workItem from="1617708815809" duration="7952000" />
+      <workItem from="1617708815809" duration="8119000" />
+      <workItem from="1617793920791" duration="3063000" />
+      <workItem from="1617884181373" duration="201000" />
+      <workItem from="1617962579182" duration="185000" />
+      <workItem from="1617971064225" duration="38000" />
+      <workItem from="1618140834025" duration="2780000" />
+      <workItem from="1618230919973" duration="989000" />
+      <workItem from="1618578346946" duration="6864000" />
+      <workItem from="1618655539042" duration="3651000" />
+      <workItem from="1619526678120" duration="3609000" />
+      <workItem from="1620299090563" duration="7188000" />
     </task>
     <task id="LOCAL-00002" summary="2021-03-26 17:53">
       <created>1616712776290</created>
@@ -353,7 +370,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617634201091</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="2021-04-06 22:53 どこでもいい">
+      <created>1617723701088</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1617723701088</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -436,7 +460,8 @@
     <MESSAGE value="2021-03-30 22:53" />
     <MESSAGE value="2021-04-4 22:53 どこでもいい" />
     <MESSAGE value="2021-04-05 22:53 どこでもいい" />
-    <option name="LAST_COMMIT_MESSAGE" value="2021-04-05 22:53 どこでもいい" />
+    <MESSAGE value="2021-04-06 22:53 どこでもいい" />
+    <option name="LAST_COMMIT_MESSAGE" value="2021-04-06 22:53 どこでもいい" />
   </component>
   <component name="WindowStateProjectService">
     <state x="254" y="84" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616118172708">

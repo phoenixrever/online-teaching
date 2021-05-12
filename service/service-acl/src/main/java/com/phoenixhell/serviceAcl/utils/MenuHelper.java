@@ -33,12 +33,12 @@ public class MenuHelper {
         MenuVo menuVo = new MenuVo();
         BeanUtils.copyProperties(permission, menuVo);
 //        menuVo.setName(permission.getName()+permission.getId());
-        if (!StringUtils.isEmpty(permission.getPath())) {
+//        if (!StringUtils.isEmpty(permission.getPath())) {
 //            if (permission.getPath().contains("id")) {
-            if (permission.getType()==2) {
+            if (permission.getType()==1) {
                 menuVo.setHidden(true);
             }
-        }
+//        }
         return menuVo;
     }
 }

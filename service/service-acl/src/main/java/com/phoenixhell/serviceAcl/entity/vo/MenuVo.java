@@ -1,5 +1,6 @@
 package com.phoenixhell.serviceAcl.entity.vo;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 
 import java.util.List;
@@ -19,8 +20,10 @@ public class MenuVo implements Comparable<MenuVo> {
     private String name;
     private Map<String,String> meta;
     private String icon;
+    private String permissionValue;
     private Integer sort;
-    private Boolean hidden=false;
+//    @TableField("type")
+    private Boolean hidden;
     private List<MenuVo> children;
 
     @Override
